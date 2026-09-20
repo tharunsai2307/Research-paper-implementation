@@ -35,6 +35,12 @@ from src.health_monitoring.schemas import (
     DEFAULT_CANDIDATE_THRESHOLD,
     DEFAULT_IOU_THRESHOLD
 )
+from src.segmentation.interface import FallbackBoundingBoxSegmentationProxy
+from src.alerts.engine import ProgressionAlertEngine
+
+# Initialize Phase 7 Extensions
+segmentation_proxy = FallbackBoundingBoxSegmentationProxy(operational_threshold=DEFAULT_OPERATIONAL_THRESHOLD)
+alert_engine = ProgressionAlertEngine()
 
 # App Configuration
 APP_DIR = PROJECT_ROOT / "app"
@@ -168,10 +174,29 @@ async def analyze_image(
         single_report = plantation_aggregator.generate_plantation_report([record], plantation_id=plantation_id)
         phi_info = single_report["plantation_health_index"]
 
+        # Attach Phase 7 fine-grained segmentation status
+        seg_result = segmentation_proxy.segment_image(
+            image=img_bgr,
+            detections=record.get("accepted_detections", [])
+        )
+        record["segmentation_analysis"] = seg_result
+
+        # Attach Phase 7 monitoring alert evaluation
+        primary_disease = record["detected_classes"][0] if record.get("detected_classes") else None
+        current_sev = record.get("relative_affected_area_proxy", 0.0)
+        # Using Phase 7 LOCF / conservative baseline for single-visit inspection
+        alert_result = alert_engine.evaluate_progression(
+            current_severity=current_sev,
+            projected_severity=current_sev, # LOCF baseline
+            primary_disease=primary_disease,
+            phi_score=phi_info["phi_composite_score"]
+        )
+        record["progression_alert"] = alert_result
+
         record["health_assessment"] = {
             "phi_score": phi_info["phi_composite_score"],
             "health_tier": phi_info["health_tier"],
-            "recommended_action": phi_info["recommended_action"],
+            "recommended_action": alert_result["recommended_action"],
             "disclaimer": (
                 "Notice: Health scores and affected area proxies represent 2D image-space visual indicators "
                 "computed by the research engine and do NOT constitute certified agronomic or clinical pathology diagnosis."

@@ -310,6 +310,35 @@ function renderResults(record) {
   const areaProxyPct = ((record.relative_affected_area_proxy || 0) * 100).toFixed(1);
   elements.resultAreaProxy.textContent = `${areaProxyPct}%`;
 
+  // Phase 7 Progression Alert & Segmentation Status
+  const alertBox = document.getElementById('result-alert-box');
+  const alertBadge = document.getElementById('result-alert-badge');
+  const trajStatus = document.getElementById('result-trajectory-status');
+  const segStatus = document.getElementById('result-seg-status');
+
+  const alertData = record.progression_alert || {};
+  const segData = record.segmentation_analysis || {};
+
+  if (alertBadge) alertBadge.textContent = alertData.alert_level || 'NO_ALERT';
+  if (trajStatus) trajStatus.textContent = alertData.progression_trajectory || 'STABLE';
+  if (segStatus) segStatus.textContent = segData.segmentation_status || 'PENDING REAL MASK DATA';
+
+  if (alertBox) {
+    if (alertData.alert_level === 'URGENT_REVIEW') {
+      alertBox.style.background = '#ffebee';
+      alertBox.style.borderLeftColor = '#c62828';
+      if (alertBadge) alertBadge.style.color = '#c62828';
+    } else if (alertData.alert_level === 'ATTENTION') {
+      alertBox.style.background = '#fff8e1';
+      alertBox.style.borderLeftColor = '#f57f17';
+      if (alertBadge) alertBadge.style.color = '#f57f17';
+    } else {
+      alertBox.style.background = '#e8f5e9';
+      alertBox.style.borderLeftColor = '#2e7d32';
+      if (alertBadge) alertBadge.style.color = '#1b5e20';
+    }
+  }
+
   // Draw Bounding Boxes on Canvas
   drawDetectionsOnCanvas(record);
 
