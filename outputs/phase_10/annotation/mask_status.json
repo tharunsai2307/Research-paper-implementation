@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-20T06:05:00Z",
+  "total_registered_images": 100,
+  "completed_annotations": 0,
+  "pending_annotations": 100,
+  "accepted_annotations": 0,
+  "qc_review_annotations": 0,
+  "rejected_annotations": 0,
+  "valid_masks": 0,
+  "invalid_masks": 0,
+  "orphan_masks": 0,
+  "orphan_mask_files": [],
+  "valid_annotations": 0,
+  "invalid_annotations": 0,
+  "orphan_annotations": 0,
+  "orphan_annotation_files": [],
+  "hard_training_gate_status": "BLOCKED",
+  "gate_reason": "Zero accepted real human masks exist. Research integrity prohibits pseudo-masks."
+}

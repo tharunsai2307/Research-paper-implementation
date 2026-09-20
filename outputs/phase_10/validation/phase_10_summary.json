@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-09-20T06:15:00Z",
+  "phase_10_version": "v1.0.0-audited-blocked-gate",
+  "benchmark_images": {
+    "registered_images": 100,
+    "classes": [
+      "bud root dropping",
+      "bud rot",
+      "gray leaf spot",
+      "leaf rot",
+      "stembleeding"
+    ],
+    "images_per_class": 20,
+    "splits": {
+      "train": 63,
+      "val": 27,
+      "test": 10
+    },
+    "leakage_status": "ZERO_CROSS_SPLIT_LEAKAGE"
+  },
+  "mask_annotation_status": {
+    "human_annotated_masks": 0,
+    "accepted_masks": 0,
+    "rejected_masks": 0,
+    "pending_annotations": 100,
+    "annotation_completion_percentage": 0.0,
+    "double_annotated_subset": 0,
+    "inter_annotator_iou": "N/A"
+  },
+  "segmentation_training": {
+    "hard_gate_status": "BLOCKED",
+    "reason": "Real ground-truth manual polygon masks pending annotation. Zero synthetic masks permitted.",
+    "experiments": {
+      "SEG-001": "BLOCKED",
+      "SEG-002": "BLOCKED"
+    }
+  },
+  "metrics": {
+    "iou": null,
+    "dice": null,
+    "precision": null,
+    "recall": null,
+    "mask_map": null
+  },
+  "box_vs_mask_analysis": {
+    "status": "AWAITING_REAL_MASKS",
+    "mean_gamma": null,
+    "median_gamma": null
+  },
+  "severity_estimation": {
+    "bounding_box_proxy_phase5": "PRESERVED_ACTIVE",
+    "segmentation_based_severity": "BLOCKED_PENDING_MASKS"
+  },
+  "mobile_integration": {
+    "endpoint": "/api/v1/analyze",
+    "segmentation_analysis_status": "PENDING_REAL_MASK_DATA",
+    "backward_compatibility": "PASS"
+  },
+  "temporal_modeling": {
+    "lstm": "NOT TRAINED",
+    "gru": "NOT TRAINED",
+    "temporal_progression": "NOT VALIDATED"
+  },
+  "historical_protection": {
+    "phase_3_protected": true,
+    "phase_4_protected": true,
+    "phase_5_protected": true,
+    "phase_6_protected": true,
+    "phase_7_protected": true,
+    "phase_8_protected": true,
+    "phase_9_protected": true
+  },
+  "phase_10_validation": "PASS",
+  "research_integrity": "PASS_ZERO_FABRICATION"
+}

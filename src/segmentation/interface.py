@@ -44,6 +44,7 @@ class FallbackBoundingBoxSegmentationProxy(AbstractBaseSegmentationModel):
         proxy_ratio = calculate_relative_affected_area_proxy(boxes, w, h)
         
         return {
+            "status": self.status,
             "segmentation_status": self.status,
             "polygons": [],
             "mask_available": False,

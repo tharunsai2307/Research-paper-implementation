@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-09-20T06:10:00Z",
+  "audit_status": "AWAITING_REAL_MASKS",
+  "total_registered_images": 100,
+  "images_with_valid_masks": 0,
+  "formula": "gamma = bbox_area / mask_area",
+  "gamma_summary": {
+    "mean_gamma": null,
+    "median_gamma": null,
+    "per_class_gamma": {
+      "bud root dropping": null,
+      "bud rot": null,
+      "gray leaf spot": null,
+      "leaf rot": null,
+      "stembleeding": null
+    }
+  },
+  "interpretation": "Empirical comparison blocked until real ground-truth polygon annotations are completed. Zero fabricated proxies reported."
+}

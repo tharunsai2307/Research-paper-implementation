@@ -52,9 +52,12 @@ class TestPhase9Segmentation(unittest.TestCase):
         self.assertTrue(val_p.exists())
         self.assertTrue(test_p.exists())
 
-        train_imgs = set(line.strip() for line in open(train_p) if line.strip())
-        val_imgs = set(line.strip() for line in open(val_p) if line.strip())
-        test_imgs = set(line.strip() for line in open(test_p) if line.strip())
+        with open(train_p, "r", encoding="utf-8") as f:
+            train_imgs = set(line.strip() for line in f if line.strip())
+        with open(val_p, "r", encoding="utf-8") as f:
+            val_imgs = set(line.strip() for line in f if line.strip())
+        with open(test_p, "r", encoding="utf-8") as f:
+            test_imgs = set(line.strip() for line in f if line.strip())
 
         self.assertEqual(len(train_imgs), 63)
         self.assertEqual(len(val_imgs), 27)

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coconut Disease Polygon Annotation Tool — Phase 10</title>
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --accent: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge {
+      background: #065f46;
+      color: #6ee7b7;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 9999px;
+    }
+    .main-container {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+    .sidebar {
+      width: 320px;
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      gap: 16px;
+      overflow-y: auto;
+    }
+    .canvas-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: #020617;
+      padding: 20px;
+      overflow: auto;
+    }
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    select, input, button {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    select:focus, input:focus {
+      border-color: var(--accent);
+    }
+    button {
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    button.primary {
+      background: var(--accent);
+      color: #022c22;
+      border: none;
+    }
+    button.primary:hover {
+      background: #059669;
+    }
+    button.danger {
+      background: var(--danger);
+      color: #fff;
+      border: none;
+    }
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .alert-box {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+    .info-box {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #6ee7b7;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+    canvas {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      cursor: crosshair;
+    }
+    .status-bar {
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>
+      <span>🌴 Coconut Disease Manual Polygon Annotation Interface</span>
+      <span class="badge">Phase 10 Integrity Gate Active</span>
+    </h1>
+    <div style="font-size: 0.85rem; color: var(--text-muted);">
+      Protocol: Phase 8 / 10 Phytopathology Specification
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="alert-box">
+        ⚠️ <strong>Research Integrity Gate</strong>: Auto-filling detection bounding boxes is strictly forbidden. Annotators must manually trace visible necrotic lesion margins.
+      </div>
+
+      <div class="control-group">
+        <label>1. Select Image (100 Benchmark)</label>
+        <select id="imageSelect">
+          <option value="">-- Choose Image --</option>
+          <optgroup label="Bud Root Dropping (20)">
+            <option value="BudRootDropping001.jpg">BudRootDropping001.jpg</option>
+            <option value="BudRootDropping002.jpg">BudRootDropping002.jpg</option>
+            <option value="BudRootDropping003.jpg">BudRootDropping003.jpg</option>
+          </optgroup>
+          <optgroup label="Bud Rot (20)">
+            <option value="BudRot001.jpg">BudRot001.jpg</option>
+            <option value="BudRot002.jpg">BudRot002.jpg</option>
+          </optgroup>
+          <optgroup label="Gray Leaf Spot (20)">
+            <option value="GrayLeafSpot001.jpg">GrayLeafSpot001.jpg</option>
+          </optgroup>
+          <optgroup label="Leaf Rot (20)">
+            <option value="LeafRot001.jpg">LeafRot001.jpg</option>
+          </optgroup>
+          <optgroup label="Stem Bleeding (20)">
+            <option value="StemBleeding001.jpg">StemBleeding001.jpg</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label>2. Disease Class</label>
+        <select id="classSelect">
+          <option value="0">0: bud root dropping</option>
+          <option value="1">1: bud rot</option>
+          <option value="2">2: gray leaf spot</option>
+          <option value="3">3: leaf rot</option>
+          <option value="4">4: stembleeding</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label>3. Annotator ID</label>
+        <input type="text" id="annotatorId" value="AGRONOMIST_LEAD_01" placeholder="e.g. AGRONOMIST_01">
+      </div>
+
+      <div class="control-group">
+        <label>4. AI Assistance Provenance</label>
+        <select id="aiAssisted">
+          <option value="false">No (Pure Manual Delineation)</option>
+          <option value="true">Yes (AI Proposal + Human Correction & Verification)</option>
+        </select>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid var(--border); width: 100%;">
+
+      <div class="control-group">
+        <label>Actions</label>
+        <button id="btnCompletePoly" class="primary">Close & Complete Polygon</button>
+        <button id="btnUndo">Undo Last Vertex</button>
+        <button id="btnClear" class="danger">Clear All Vertices</button>
+      </div>
+
+      <div class="info-box" id="polyInfo">
+        Vertices: 0<br>
+        Normalized Area: 0.0000<br>
+        Status: Drawing in progress
+      </div>
+
+      <button id="btnExport" class="primary" style="margin-top: auto;">Save & Export Annotation</button>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="annotationCanvas" width="640" height="640"></canvas>
+      <div class="status-bar" id="statusBar">
+        Click on lesion boundary to place vertices. Minimum 3 required.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('annotationCanvas');
+    const ctx = canvas.getContext('2d');
+    let points = [];
+    let isClosed = false;
+
+    // Canvas click handler
+    canvas.addEventListener('click', (e) => {
+      if (isClosed) return;
+      const rect = canvas.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / canvas.width;
+      const y = (e.clientY - rect.top) / canvas.height;
+      points.push([Math.max(0, Math.min(1, x)), Math.max(0, Math.min(1, y))]);
+      draw();
+      updateInfo();
+    });
+
+    document.getElementById('btnUndo').addEventListener('click', () => {
+      points.pop();
+      isClosed = false;
+      draw();
+      updateInfo();
+    });
+
+    document.getElementById('btnClear').addEventListener('click', () => {
+      points = [];
+      isClosed = false;
+      draw();
+      updateInfo();
+    });
+
+    document.getElementById('btnCompletePoly').addEventListener('click', () => {
+      if (points.length >= 3) {
+        isClosed = true;
+        draw();
+        updateInfo();
+      } else {
+        alert("At least 3 vertices required to close a polygon.");
+      }
+    });
+
+    function calculateArea() {
+      if (points.length < 3) return 0;
+      let a = 0;
+      for (let i = 0; i < points.length; i++) {
+        let j = (i + 1) % points.length;
+        a += points[i][0] * points[j][1];
+        a -= points[j][0] * points[i][1];
+      }
+      return Math.abs(a) / 2;
+    }
+
+    function updateInfo() {
+      const area = calculateArea();
+      document.getElementById('polyInfo').innerHTML = `
+        Vertices: ${points.length}<br>
+        Normalized Area: ${area.toFixed(5)}<br>
+        Status: ${isClosed ? '<span style="color:#6ee7b7">Closed & Ready</span>' : 'Delineating'}
+      `;
+    }
+
+    function draw() {
+      ctx.fillStyle = '#020617';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Grid lines for reference
+      ctx.strokeStyle = '#1e293b';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < canvas.width; i += 64) {
+        ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, canvas.height); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(canvas.width, i); ctx.stroke();
+      }
+
+      if (points.length === 0) return;
+
+      // Draw edges
+      ctx.strokeStyle = '#10b981';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(points[0][0] * canvas.width, points[0][1] * canvas.height);
+      for (let i = 1; i < points.length; i++) {
+        ctx.lineTo(points[i][0] * canvas.width, points[i][1] * canvas.height);
+      }
+      if (isClosed) {
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(16, 185, 129, 0.25)';
+        ctx.fill();
+      }
+      ctx.stroke();
+
+      // Draw vertices
+      for (let i = 0; i < points.length; i++) {
+        ctx.fillStyle = (i === 0) ? '#f59e0b' : '#38bdf8';
+        ctx.beginPath();
+        ctx.arc(points[i][0] * canvas.width, points[i][1] * canvas.height, 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    document.getElementById('btnExport').addEventListener('click', () => {
+      if (!isClosed || points.length < 3) {
+        alert("Please complete the polygon with >= 3 vertices before saving.");
+        return;
+      }
+      const classId = document.getElementById('classSelect').value;
+      const flat = points.map(p => `${p[0].toFixed(6)} ${p[1].toFixed(6)}`).join(' ');
+      const yoloLine = `${classId} ${flat}`;
+      
+      prompt("YOLO Segmentation Polygon String (Copy to annotation file):", yoloLine);
+    });
+
+    draw();
+  </script>
+</body>
+</html>

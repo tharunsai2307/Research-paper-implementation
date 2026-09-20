@@ -1,0 +1,22 @@
+# YOLOv8 Instance Segmentation Dataset Configuration
+# Research Title: A YOLOv8-Based Framework for Automated Coconut Tree Disease Detection and Plantation Health Monitoring Using Mobile Applications
+# Phase 10 — Segmentation Protocol
+
+# Paths to split files or directory trees
+path: ../data/processed/phase_10_segmentation
+train: images/train
+val: images/val
+test: images/test
+
+# Disease Class Definitions (Aligned with Phase 2B, 3, 4, 8, 9, 10)
+names:
+  0: bud root dropping
+  1: bud rot
+  2: gray leaf spot
+  3: leaf rot
+  4: stembleeding
+
+# Verification Metadata
+nc: 5
+hard_gate_status: BLOCKED_PENDING_MANUAL_MASKS
+anti_fabrication_rule: "Zero synthetic masks permitted. Requires verified manual polygon annotations."
