@@ -19,9 +19,17 @@ class ObservationStatus:
     INVALID_INPUT = "INVALID_INPUT"
     INFERENCE_ERROR = "INFERENCE_ERROR"
 
-# Operational Thresholds (Engineering configurations, not post-hoc tuned on test set)
-DEFAULT_OPERATIONAL_THRESHOLD = 0.25
-DEFAULT_CANDIDATE_THRESHOLD = 0.10
+# Operational Thresholds (Engineering configurations)
+# BUG FIX 2026-09-20: Phase 12 threshold sensitivity study (validation set sweep)
+# found optimal F1 at conf=0.10 for EXP-002 (deployed model).
+# EXP-002 max prediction confidence on training images is ~0.16,
+# which is below the previous DEFAULT_OPERATIONAL_THRESHOLD of 0.25.
+# Fix: lower operational threshold to 0.10 (validated optimum).
+# DEFAULT_CANDIDATE_THRESHOLD lowered to 0.05 to preserve two-tier screening.
+# Phase 4 frozen test metrics (mAP50, precision, recall) are NOT affected —
+# mAP50 is computed from the full PR curve and is threshold-independent.
+DEFAULT_OPERATIONAL_THRESHOLD = 0.10  # was 0.25 — see research/bug_fix_detection_pipeline.md
+DEFAULT_CANDIDATE_THRESHOLD = 0.05   # was 0.10 — lower screening floor
 DEFAULT_IOU_THRESHOLD = 0.70
 
 def validate_detection_record(det: Dict[str, Any]) -> bool:

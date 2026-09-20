@@ -31,8 +31,10 @@ class TestMobileAppAPI(unittest.TestCase):
         data = response.json()
         self.assertEqual(data["status"], "HEALTHY")
         self.assertEqual(data["model_id"], "EXP-002_imgsz512")
-        self.assertEqual(data["operational_confidence_threshold"], 0.25)
-        self.assertEqual(data["candidate_confidence_threshold"], 0.10)
+        # BUG FIX 2026-09-20: operational threshold corrected from 0.25 to 0.10
+        # per Phase 12 threshold sensitivity study (see research/bug_fix_detection_pipeline.md)
+        self.assertEqual(data["operational_confidence_threshold"], 0.10)
+        self.assertEqual(data["candidate_confidence_threshold"], 0.05)
         self.assertIn("classes", data)
         self.assertEqual(len(data["classes"]), 5)
         # Verify all 5 research classes are present in the response
