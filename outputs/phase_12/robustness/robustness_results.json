@@ -1,0 +1,431 @@
+{
+  "meta": {
+    "phase": "Phase 12 \u2014 Perturbation Robustness Testing",
+    "dataset": "Validation set (val/images)",
+    "conf_threshold": 0.25,
+    "iou_match_threshold": 0.5,
+    "perturbation_groups": [
+      "baseline",
+      "gaussian_blur",
+      "gaussian_noise",
+      "brightness",
+      "jpeg_compression"
+    ],
+    "val_images": 35,
+    "note": "numpy seed=42 for noise reproducibility"
+  },
+  "EXP-001_baseline_yolov8n": {
+    "baseline": [
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "baseline",
+        "perturbation_name": "none",
+        "param": 0,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 10.87
+      }
+    ],
+    "gaussian_blur": [
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "gaussian_blur",
+        "perturbation_name": "sigma_1",
+        "param": 1,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 5.88
+      },
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "gaussian_blur",
+        "perturbation_name": "sigma_2",
+        "param": 2,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 5.79
+      },
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "gaussian_blur",
+        "perturbation_name": "sigma_3",
+        "param": 3,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 5.95
+      }
+    ],
+    "gaussian_noise": [
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "gaussian_noise",
+        "perturbation_name": "std_10",
+        "param": 10,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 10.8
+      },
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "gaussian_noise",
+        "perturbation_name": "std_25",
+        "param": 25,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 11.04
+      },
+      {
+        "tp": 2,
+        "fp": 14,
+        "fn": 28,
+        "precision": 0.125,
+        "recall": 0.0667,
+        "f1": 0.087,
+        "perturbation_group": "gaussian_noise",
+        "perturbation_name": "std_50",
+        "param": 50,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 14.32
+      }
+    ],
+    "brightness": [
+      {
+        "tp": 1,
+        "fp": 0,
+        "fn": 29,
+        "precision": 1.0,
+        "recall": 0.0333,
+        "f1": 0.0645,
+        "perturbation_group": "brightness",
+        "perturbation_name": "factor_0.5",
+        "param": 0.5,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 7.93
+      },
+      {
+        "tp": 1,
+        "fp": 0,
+        "fn": 29,
+        "precision": 1.0,
+        "recall": 0.0333,
+        "f1": 0.0645,
+        "perturbation_group": "brightness",
+        "perturbation_name": "factor_0.75",
+        "param": 0.75,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 8.07
+      },
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "brightness",
+        "perturbation_name": "factor_1.25",
+        "param": 1.25,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 7.03
+      },
+      {
+        "tp": 1,
+        "fp": 0,
+        "fn": 29,
+        "precision": 1.0,
+        "recall": 0.0333,
+        "f1": 0.0645,
+        "perturbation_group": "brightness",
+        "perturbation_name": "factor_1.5",
+        "param": 1.5,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 6.49
+      }
+    ],
+    "jpeg_compression": [
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "jpeg_compression",
+        "perturbation_name": "quality_80",
+        "param": 80,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 6.54
+      },
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "jpeg_compression",
+        "perturbation_name": "quality_60",
+        "param": 60,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 7.93
+      },
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "jpeg_compression",
+        "perturbation_name": "quality_40",
+        "param": 40,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 5.94
+      },
+      {
+        "tp": 1,
+        "fp": 0,
+        "fn": 29,
+        "precision": 1.0,
+        "recall": 0.0333,
+        "f1": 0.0645,
+        "perturbation_group": "jpeg_compression",
+        "perturbation_name": "quality_20",
+        "param": 20,
+        "model_id": "EXP-001_baseline_yolov8n",
+        "elapsed_s": 5.43
+      }
+    ]
+  },
+  "EXP-002_imgsz512": {
+    "baseline": [
+      {
+        "tp": 3,
+        "fp": 3,
+        "fn": 27,
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1": 0.1667,
+        "perturbation_group": "baseline",
+        "perturbation_name": "none",
+        "param": 0,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.67
+      }
+    ],
+    "gaussian_blur": [
+      {
+        "tp": 3,
+        "fp": 2,
+        "fn": 27,
+        "precision": 0.6,
+        "recall": 0.1,
+        "f1": 0.1714,
+        "perturbation_group": "gaussian_blur",
+        "perturbation_name": "sigma_1",
+        "param": 1,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.43
+      },
+      {
+        "tp": 3,
+        "fp": 2,
+        "fn": 27,
+        "precision": 0.6,
+        "recall": 0.1,
+        "f1": 0.1714,
+        "perturbation_group": "gaussian_blur",
+        "perturbation_name": "sigma_2",
+        "param": 2,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.32
+      },
+      {
+        "tp": 3,
+        "fp": 2,
+        "fn": 27,
+        "precision": 0.6,
+        "recall": 0.1,
+        "f1": 0.1714,
+        "perturbation_group": "gaussian_blur",
+        "perturbation_name": "sigma_3",
+        "param": 3,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.6
+      }
+    ],
+    "gaussian_noise": [
+      {
+        "tp": 3,
+        "fp": 3,
+        "fn": 27,
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1": 0.1667,
+        "perturbation_group": "gaussian_noise",
+        "perturbation_name": "std_10",
+        "param": 10,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 9.25
+      },
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "gaussian_noise",
+        "perturbation_name": "std_25",
+        "param": 25,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 10.27
+      },
+      {
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "perturbation_group": "gaussian_noise",
+        "perturbation_name": "std_50",
+        "param": 50,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 9.71
+      }
+    ],
+    "brightness": [
+      {
+        "tp": 3,
+        "fp": 3,
+        "fn": 27,
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1": 0.1667,
+        "perturbation_group": "brightness",
+        "perturbation_name": "factor_0.5",
+        "param": 0.5,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.76
+      },
+      {
+        "tp": 3,
+        "fp": 1,
+        "fn": 27,
+        "precision": 0.75,
+        "recall": 0.1,
+        "f1": 0.1765,
+        "perturbation_group": "brightness",
+        "perturbation_name": "factor_0.75",
+        "param": 0.75,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.92
+      },
+      {
+        "tp": 3,
+        "fp": 2,
+        "fn": 27,
+        "precision": 0.6,
+        "recall": 0.1,
+        "f1": 0.1714,
+        "perturbation_group": "brightness",
+        "perturbation_name": "factor_1.25",
+        "param": 1.25,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.61
+      },
+      {
+        "tp": 2,
+        "fp": 1,
+        "fn": 28,
+        "precision": 0.6667,
+        "recall": 0.0667,
+        "f1": 0.1212,
+        "perturbation_group": "brightness",
+        "perturbation_name": "factor_1.5",
+        "param": 1.5,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.7
+      }
+    ],
+    "jpeg_compression": [
+      {
+        "tp": 3,
+        "fp": 3,
+        "fn": 27,
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1": 0.1667,
+        "perturbation_group": "jpeg_compression",
+        "perturbation_name": "quality_80",
+        "param": 80,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.75
+      },
+      {
+        "tp": 3,
+        "fp": 3,
+        "fn": 27,
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1": 0.1667,
+        "perturbation_group": "jpeg_compression",
+        "perturbation_name": "quality_60",
+        "param": 60,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 4.67
+      },
+      {
+        "tp": 3,
+        "fp": 4,
+        "fn": 27,
+        "precision": 0.4286,
+        "recall": 0.1,
+        "f1": 0.1622,
+        "perturbation_group": "jpeg_compression",
+        "perturbation_name": "quality_40",
+        "param": 40,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 5.13
+      },
+      {
+        "tp": 3,
+        "fp": 3,
+        "fn": 27,
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1": 0.1667,
+        "perturbation_group": "jpeg_compression",
+        "perturbation_name": "quality_20",
+        "param": 20,
+        "model_id": "EXP-002_imgsz512",
+        "elapsed_s": 6.37
+      }
+    ]
+  }
+}

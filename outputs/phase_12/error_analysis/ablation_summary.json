@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "phase": "Phase 12",
+    "source": "Phase 3 training results + Phase 4 test results",
+    "note": "Ablation: image size effect on accuracy and latency"
+  },
+  "experiments": [
+    {
+      "experiment_id": "EXP-001_baseline_yolov8n",
+      "architecture": "yolov8n.pt",
+      "imgsz": 640,
+      "epochs": 15,
+      "parameters": 3006623,
+      "model_size_mb": 5.94,
+      "training_duration_s": 740.0,
+      "val_mAP50": 0.6186,
+      "val_mAP50_95": 0.26,
+      "val_precision": 0.8661,
+      "val_recall": 0.4824,
+      "val_f1": 0.6197,
+      "test_precision": 0.816,
+      "test_recall": 0.4,
+      "test_mAP50": 0.6343,
+      "test_mAP50_95": 0.3663,
+      "test_f1": 0.5368,
+      "cpu_mean_latency_ms": 110.07,
+      "estimated_fps": 9.1
+    },
+    {
+      "experiment_id": "EXP-002_imgsz512",
+      "architecture": "yolov8n.pt",
+      "imgsz": 512,
+      "epochs": 15,
+      "parameters": 3006623,
+      "model_size_mb": 5.93,
+      "training_duration_s": 489.3,
+      "val_mAP50": 0.5752,
+      "val_mAP50_95": 0.2426,
+      "val_precision": 0.7308,
+      "val_recall": 0.4,
+      "val_f1": 0.517,
+      "test_precision": 0.9044,
+      "test_recall": 0.4,
+      "test_mAP50": 0.6862,
+      "test_mAP50_95": 0.2471,
+      "test_f1": 0.5547,
+      "cpu_mean_latency_ms": 74.56,
+      "estimated_fps": 13.4
+    }
+  ]
+}
