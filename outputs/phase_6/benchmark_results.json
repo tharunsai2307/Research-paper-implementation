@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-20T05:04:54Z",
+    "benchmark_environment": {
+      "host_os": "win32",
+      "python_version": "3.14.4",
+      "torch_version": "2.13.0+cpu",
+      "cpu_arch": 2801.0,
+      "physical_cores": 4,
+      "logical_cores": 8,
+      "device_tested": "CPU",
+      "target_mobile_hardware": "Not measured \u2014 target mobile hardware (ARM/CoreML/NNAPI) physically unavailable."
+    },
+    "model": {
+      "model_id": "EXP-002_imgsz512",
+      "checkpoint": "outputs/phase_6/models/best_exp002_512.pt",
+      "format": "PyTorch (.pt) / TorchScript (.torchscript available)",
+      "size_mb": 5.93,
+      "input_resolution": [
+        512,
+        512
+      ],
+      "operational_threshold": 0.25,
+      "candidate_threshold": 0.1,
+      "iou_threshold": 0.7
+    }
+  },
+  "measured_metrics": {
+    "model_load_latency_ms": 37.71,
+    "memory_usage": {
+      "initial_rss_mb": 250.85,
+      "post_load_rss_mb": 269.14,
+      "delta_load_rss_mb": 18.29,
+      "peak_inference_rss_mb": 410.97
+    },
+    "latency_breakdown_ms": {
+      "num_benchmark_trials": 20,
+      "preprocessing": {
+        "mean_ms": 10.38,
+        "median_ms": 10.25,
+        "std_ms": 0.61,
+        "min_ms": 9.93,
+        "max_ms": 12.89
+      },
+      "model_inference": {
+        "mean_ms": 77.06,
+        "median_ms": 73.87,
+        "std_ms": 9.47,
+        "min_ms": 69.28,
+        "max_ms": 114.54
+      },
+      "postprocessing_and_area_proxy": {
+        "mean_ms": 9.75,
+        "median_ms": 9.61,
+        "std_ms": 4.94,
+        "min_ms": 0.5,
+        "max_ms": 24.21
+      },
+      "end_to_end_pipeline": {
+        "mean_ms": 172.61,
+        "median_ms": 169.5,
+        "std_ms": 12.17,
+        "min_ms": 160.25,
+        "max_ms": 209.67
+      }
+    }
+  },
+  "target_mobile_edge_status": {
+    "on_device_edge_latency": "NOT MEASURED \u2014 Target smartphone hardware (e.g. Snapdragon, Apple A-series) unavailable in host runtime.",
+    "on_device_edge_fps": "NOT MEASURED \u2014 Cannot claim edge FPS without hardware measurement.",
+    "on_device_edge_power": "NOT MEASURED \u2014 Power draw analyzer hardware unavailable.",
+    "backend_serving_latency": "MEASURED \u2014 Mean end-to-end latency: 172.61 ms on host CPU."
+  }
+}

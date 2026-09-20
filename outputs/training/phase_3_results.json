@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "project": "coconut-disease-yolov8",
+    "phase": "Phase 3 \u2014 Model Training & Controlled Experimentation",
+    "timestamp": "2026-09-20 04:24:08 UTC",
+    "device": "CPU (AMD Ryzen 5 7520U with Radeon Graphics)",
+    "cuda_available": false,
+    "dataset": "data/processed/coconut_detection_clean"
+  },
+  "completed_experiments": [
+    {
+      "experiment_id": "EXP-001_baseline_yolov8n",
+      "model_architecture": "yolov8n.pt",
+      "pretrained_weights": "yolov8n.pt",
+      "imgsz": 640,
+      "epochs": 15,
+      "batch_size": 16,
+      "seed": 42,
+      "optimizer": "AdamW",
+      "initial_lr": 0.001,
+      "training_duration_seconds": 740.0,
+      "parameters": 3006623,
+      "model_size_mb": 5.94,
+      "overall_metrics": {
+        "precision": 0.8661,
+        "recall": 0.4824,
+        "mAP50": 0.6186,
+        "mAP50_95": 0.26,
+        "f1_score": 0.6197
+      },
+      "per_class_ap50_95": {
+        "bud root dropping": 0.0057,
+        "bud rot": 0.4202,
+        "gray leaf spot": 0.0491,
+        "leaf rot": 0.4064,
+        "stembleeding": 0.4187
+      },
+      "latency_benchmark": {
+        "device": "CPU (AMD Ryzen 5 7520U)",
+        "image_size": 640,
+        "images_evaluated": 20,
+        "mean_preprocess_ms": 3.09,
+        "mean_inference_ms": 89.46,
+        "mean_postprocess_ms": 0.58,
+        "total_latency_ms": 93.13,
+        "estimated_fps": 10.7
+      },
+      "healthy_negative_control_evaluation": {
+        "total_healthy_val_images": 8,
+        "confidence_threshold": 0.25,
+        "false_positive_images": 0,
+        "false_positive_rate": 0.0,
+        "false_positive_details": []
+      },
+      "best_checkpoint": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\outputs\\training\\EXP-001_baseline_yolov8n\\weights\\best.pt",
+      "last_checkpoint": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\outputs\\training\\EXP-001_baseline_yolov8n\\weights\\last.pt"
+    },
+    {
+      "experiment_id": "EXP-002_imgsz512",
+      "model_architecture": "yolov8n.pt",
+      "pretrained_weights": "yolov8n.pt",
+      "imgsz": 512,
+      "epochs": 15,
+      "batch_size": 16,
+      "seed": 42,
+      "optimizer": "AdamW",
+      "initial_lr": 0.001,
+      "training_duration_seconds": 489.3,
+      "parameters": 3006623,
+      "model_size_mb": 5.93,
+      "overall_metrics": {
+        "precision": 0.7308,
+        "recall": 0.4,
+        "mAP50": 0.5752,
+        "mAP50_95": 0.2426,
+        "f1_score": 0.517
+      },
+      "per_class_ap50_95": {
+        "bud root dropping": 0.0727,
+        "bud rot": 0.2248,
+        "gray leaf spot": 0.0292,
+        "leaf rot": 0.2754,
+        "stembleeding": 0.6111
+      },
+      "latency_benchmark": {
+        "device": "CPU (AMD Ryzen 5 7520U)",
+        "image_size": 512,
+        "images_evaluated": 20,
+        "mean_preprocess_ms": 1.85,
+        "mean_inference_ms": 66.32,
+        "mean_postprocess_ms": 0.57,
+        "total_latency_ms": 68.74,
+        "estimated_fps": 14.5
+      },
+      "healthy_negative_control_evaluation": {
+        "total_healthy_val_images": 8,
+        "confidence_threshold": 0.25,
+        "false_positive_images": 0,
+        "false_positive_rate": 0.0,
+        "false_positive_details": []
+      },
+      "best_checkpoint": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\outputs\\training\\EXP-002_imgsz512\\weights\\best.pt",
+      "last_checkpoint": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\outputs\\training\\EXP-002_imgsz512\\weights\\last.pt"
+    }
+  ],
+  "unexecuted_experiments": [
+    {
+      "experiment_id": "EXP-003_yolov8s",
+      "model_architecture": "yolov8s.pt",
+      "pretrained_weights": "yolov8s.pt",
+      "imgsz": 640,
+      "epochs": 15,
+      "batch_size": 16,
+      "seed": 42,
+      "optimizer": "AdamW",
+      "initial_lr": 0.001,
+      "training_duration_seconds": "NOT_AVAILABLE",
+      "parameters": 11166560,
+      "model_size_mb": 22.5,
+      "status": "NOT_RUN",
+      "status_reason": "Hardware compute limitation: Host system operates in CPU-only mode (AMD Ryzen 5 7520U, CUDA unavailable). Estimated training time exceeds reasonable synchronous CPU compute envelope without GPU acceleration.",
+      "overall_metrics": {
+        "precision": "NOT_AVAILABLE",
+        "recall": "NOT_AVAILABLE",
+        "mAP50": "NOT_AVAILABLE",
+        "mAP50_95": "NOT_AVAILABLE",
+        "f1_score": "NOT_AVAILABLE"
+      },
+      "per_class_ap50_95": {
+        "bud root dropping": "NOT_AVAILABLE",
+        "bud rot": "NOT_AVAILABLE",
+        "gray leaf spot": "NOT_AVAILABLE",
+        "leaf rot": "NOT_AVAILABLE",
+        "stembleeding": "NOT_AVAILABLE"
+      },
+      "latency_benchmark": "NOT_AVAILABLE",
+      "healthy_negative_control_evaluation": "NOT_AVAILABLE"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "total_images_analyzed": 100,
+  "exact_duplicate_groups": 0,
+  "total_exact_duplicate_images": 0,
+  "near_duplicate_pairs": 49,
+  "cross_class_leakage_groups": 0,
+  "exact_duplicates": {},
+  "near_duplicates_sample": [
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping001.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping002.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping001.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping003.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 2,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping001.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping004.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping001.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping005.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping001.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping006.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 2,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping001.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping007.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 4,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping002.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping003.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping002.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping004.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 0,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping002.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping005.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 0,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping002.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping006.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping003.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping004.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping003.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping005.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping003.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping006.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 2,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping004.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping005.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 0,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping004.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping006.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping005.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping006.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping006.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping007.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 4,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping017.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping018.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 2,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping017.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping019.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 3,
+      "is_cross_class": false
+    },
+    {
+      "file1": "Bud Root Dropping\\BudRootDropping018.jpg",
+      "file2": "Bud Root Dropping\\BudRootDropping019.jpg",
+      "class1": "Bud Root Dropping",
+      "class2": "Bud Root Dropping",
+      "hamming_distance": 1,
+      "is_cross_class": false
+    }
+  ],
+  "cross_class_leaks": []
+}

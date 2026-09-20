@@ -1,0 +1,18 @@
+# Ultralytics YOLOv8 Dataset Configuration: Coconut Tree Disease Detection
+# Framework: A YOLOv8-Based Framework for Automated Coconut Tree Disease Detection
+
+path: ../data/processed/coconut_disease_yolo  # Root dataset path
+train: images/train                          # Training image directory (relative to path)
+val: images/val                              # Validation image directory (relative to path)
+test: images/test                            # Test image directory (relative to path)
+
+# Number of classes
+nc: 5
+
+# Class dictionary mapping class IDs to human-readable names
+names:
+  0: bud_rot
+  1: bud_root_dropping
+  2: gray_leaf_spot
+  3: leaf_rot
+  4: stem_bleeding

@@ -1,0 +1,65 @@
+# ==============================================================================
+# BASELINE EXPERIMENT CONFIGURATION — NOT YET EXECUTED
+# ==============================================================================
+# Research Title:
+# "A YOLOv8-Based Framework for Automated Coconut Tree Disease Detection and 
+#  Plantation Health Monitoring Using Mobile Applications"
+#
+# Phase: Phase 3 (Experimentation Proposal)
+# Model Family: Ultralytics YOLOv8
+# Task: Object Detection
+# Status: PLANNED SPECIFICATION ONLY — ZERO TRAINING HAS OCCURRED
+# ==============================================================================
+
+# Model Architecture
+model: yolov8n.pt                  # YOLOv8 Nano (lightweight backbone optimized for mobile edge inference)
+task: detect
+
+# Dataset Path Configuration
+data: data/processed/coconut_detection_clean/data.yaml
+
+# Training Hyperparameters
+epochs: 100                        # Proposed epoch ceiling with early stopping
+patience: 15                       # Early stopping patience if validation mAP50 fails to improve
+batch: 16                          # Mini-batch size
+imgsz: 640                         # Standard multi-scale square resolution
+device: cpu                        # Automatically fallback to CUDA:0 if GPU available at runtime
+workers: 4                         # Dataloader worker subprocesses
+seed: 42                           # Deterministic research seed
+
+# Optimization Strategy
+optimizer: AdamW                   # AdamW with decoupled weight decay for lesion feature stability
+lr0: 0.001                         # Initial learning rate
+lrf: 0.01                          # Final learning rate factor (cosine schedule decay: 0.001 * 0.01)
+momentum: 0.937                    # Gradient momentum
+weight_decay: 0.0005               # L2 regularization weight decay
+warmup_epochs: 3.0                 # Warmup phase epochs
+warmup_momentum: 0.8               # Initial momentum during warmup
+
+# Loss Function & Head Balancing
+box: 7.5                           # Bounding box regression loss gain
+cls: 0.5                           # Classification loss gain (focal loss weighting)
+dfl: 1.5                           # Distribution Focal Loss gain
+
+# Augmentation Settings (Mobile Edge Domain Adaptation)
+hsv_h: 0.015                       # HSV-Hue augmentation (tropical sunlight variation)
+hsv_s: 0.7                         # HSV-Saturation augmentation
+hsv_v: 0.4                         # HSV-Value/brightness augmentation
+degrees: 10.0                      # Image rotation (+/- deg) for angled handheld mobile capture
+translate: 0.1                     # Image translation (+/- fraction)
+scale: 0.5                         # Image scale gain (simulating drone vs. ground phone camera distance)
+shear: 2.0                         # Shear angle (+/- deg)
+perspective: 0.0                   # Perspective transformation
+flipud: 0.0                        # Vertical flip (disabled; coconut trees have upright trunk morphology)
+fliplr: 0.5                        # Horizontal flip (enabled for bilateral canopy symmetry)
+mosaic: 1.0                        # Mosaic augmentation (combines 4 scenes to improve small lesion detection)
+mixup: 0.15                        # Mixup augmentation probability
+copy_paste: 0.0                    # Segment copy-paste probability
+
+# Logging & Artifact Output Directory
+project: outputs/models/phase3_experiments
+name: yolov8n_baseline_run
+save: true
+save_period: 10                    # Checkpoint every 10 epochs
+plots: true
+verbose: true

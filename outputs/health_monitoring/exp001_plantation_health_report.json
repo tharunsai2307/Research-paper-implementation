@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "observation_session_id": "SESSION_VAL_DEMO_20260920",
+    "engine_version": "Phase-5-v1.0.0",
+    "operational_confidence_threshold": 0.25
+  },
+  "observation_counts": {
+    "total_images_submitted": 35,
+    "successfully_processed_images": 35,
+    "processing_failures": 0,
+    "disease_positive_images": 0,
+    "disease_negative_images": 24,
+    "low_confidence_candidate_images": 11
+  },
+  "observation_rates": {
+    "disease_positive_image_percentage": 0.0,
+    "disease_negative_image_percentage": 68.57,
+    "low_confidence_image_percentage": 31.43,
+    "rate_definition": "Percentage of successfully decoded observation photos showing confirmed target disease."
+  },
+  "impact_indicators": {
+    "mean_boxes_per_image": 0.0,
+    "median_boxes_per_image": 0.0,
+    "max_boxes_in_single_image": 0,
+    "mean_relative_affected_area_all_images": 0.0,
+    "mean_relative_affected_area_positive_images": 0.0,
+    "max_relative_affected_area": 0.0,
+    "confidence_distribution": {
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  },
+  "disease_distribution": {
+    "bud root dropping": {
+      "class_id": 0,
+      "disease_class": "bud root dropping",
+      "detection_count": 0,
+      "percentage_of_total_detections": 0.0,
+      "unique_images_affected": 0,
+      "percentage_of_images_affected": 0.0
+    },
+    "bud rot": {
+      "class_id": 1,
+      "disease_class": "bud rot",
+      "detection_count": 0,
+      "percentage_of_total_detections": 0.0,
+      "unique_images_affected": 0,
+      "percentage_of_images_affected": 0.0
+    },
+    "gray leaf spot": {
+      "class_id": 2,
+      "disease_class": "gray leaf spot",
+      "detection_count": 0,
+      "percentage_of_total_detections": 0.0,
+      "unique_images_affected": 0,
+      "percentage_of_images_affected": 0.0
+    },
+    "leaf rot": {
+      "class_id": 3,
+      "disease_class": "leaf rot",
+      "detection_count": 0,
+      "percentage_of_total_detections": 0.0,
+      "unique_images_affected": 0,
+      "percentage_of_images_affected": 0.0
+    },
+    "stembleeding": {
+      "class_id": 4,
+      "disease_class": "stembleeding",
+      "detection_count": 0,
+      "percentage_of_total_detections": 0.0,
+      "unique_images_affected": 0,
+      "percentage_of_images_affected": 0.0
+    }
+  },
+  "plantation_health_index": {
+    "phi_composite_score": 100.0,
+    "phi_incidence_only_score": 100.0,
+    "health_tier": "EXCELLENT / MINIMAL_DISEASE_PRESSURE",
+    "formula_used": "PHI_composite = 100 * (1.0 - (w1 * (N_pos / N_success) + w2 * Mean_Affected_Area_Proxy))",
+    "weights": {
+      "w1_incidence": 0.85,
+      "w2_area_proxy": 0.15
+    },
+    "recommended_action": "Maintain routine prophylactic monitoring. No immediate systemic treatment required."
+  },
+  "methodological_assumptions_and_limitations": [
+    "Observation-level rates reflect submitted photo samples and do NOT represent formal epidemiological prevalence across a whole plantation block without random grid sampling.",
+    "Relative Affected Area Proxy measures 2D visible bounding box footprint in the photograph and does not replace in-situ plant pathology tissue staging.",
+    "Weights w1=0.85 and w2=0.15 are engineered methodological assumptions prioritizing tree infection incidence over photographic frame coverage."
+  ]
+}

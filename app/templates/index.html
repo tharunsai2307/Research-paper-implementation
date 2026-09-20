@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Coconut Disease Detection & Plantation Health Monitor</title>
+  <meta name="description" content="A YOLOv8-based mobile application framework for automated coconut tree disease detection and plantation health monitoring.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Mobile Navigation Bar -->
+    <header class="app-header">
+      <div class="header-content">
+        <div class="header-brand">
+          <span class="brand-icon">🌴</span>
+          <div>
+            <h1 class="brand-title">CocoHealth AI</h1>
+            <span class="brand-subtitle">YOLOv8 Plantation Health Monitor</span>
+          </div>
+        </div>
+        <div class="header-status-badge" id="api-status-badge">
+          <span class="status-dot"></span>
+          <span id="api-status-text">Connecting...</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dynamic Screen Viewport -->
+    <main class="app-main">
+      
+      <!-- SCREEN 1: Home & Image Acquisition -->
+      <section id="screen-home" class="screen-view active">
+        <div class="hero-card">
+          <div class="hero-badge">Research Framework</div>
+          <h2 class="hero-title">Automated Coconut Disease Diagnosis</h2>
+          <p class="hero-desc">
+            Instantly detect foliar and trunk pathologies using localized YOLOv8 object detection,
+            compute visual affected area proxies, and monitor overall palm and plantation health.
+          </p>
+        </div>
+
+        <!-- Mode Toggle: Single Palm vs Multi-Palm Scouting Walk -->
+        <div class="session-mode-card">
+          <div class="mode-header">
+            <span class="mode-icon">📋</span>
+            <span class="mode-title">Inspection Workflow</span>
+          </div>
+          <div class="mode-toggle-group">
+            <button type="button" class="mode-btn active" id="btn-mode-single">Single Palm</button>
+            <button type="button" class="mode-btn" id="btn-mode-scouting">Plantation Scouting Walk (<span id="session-count-badge">0</span>)</button>
+          </div>
+        </div>
+
+        <!-- Primary Camera / Gallery Actions -->
+        <div class="action-card">
+          <h3 class="action-title">Capture or Select Palm Photo</h3>
+          <p class="action-subtitle">Photograph coconut fronds, crowns, or trunk lesions with clear lighting.</p>
+          
+          <div class="action-buttons-grid">
+            <!-- Native Mobile Camera Trigger -->
+            <label class="btn-action btn-camera" for="camera-input">
+              <span class="action-btn-icon">📷</span>
+              <span class="action-btn-text">Take Photo</span>
+              <span class="action-btn-hint">Use Camera</span>
+              <input type="file" id="camera-input" accept="image/*" capture="environment" class="file-input-hidden">
+            </label>
+
+            <!-- Gallery Picker Trigger -->
+            <label class="btn-action btn-gallery" for="gallery-input">
+              <span class="action-btn-icon">🖼️</span>
+              <span class="action-btn-text">Choose Gallery</span>
+              <span class="action-btn-hint">From Device</span>
+              <input type="file" id="gallery-input" accept="image/jpeg,image/png,image/webp" class="file-input-hidden">
+            </label>
+          </div>
+
+          <!-- Optional Block Identifier Input -->
+          <div class="field-group">
+            <label for="input-plantation-id" class="field-label">Plantation / Block ID</label>
+            <input type="text" id="input-plantation-id" class="field-input" value="COCO_BLOCK_NORTH_01" placeholder="e.g., BLOCK_A">
+          </div>
+        </div>
+
+        <!-- System Specifications Card -->
+        <div class="specs-card">
+          <div class="specs-header">
+            <span class="specs-icon">⚙️</span>
+            <span class="specs-title">Research Engine Specifications</span>
+          </div>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Model Deployed</span>
+              <span class="spec-value" id="spec-model-name">EXP-002 (512x512)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Operational Cutoff</span>
+              <span class="spec-value" id="spec-conf-cutoff">τ = 0.25</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Candidate Screening</span>
+              <span class="spec-value">0.10 ≤ conf &lt; 0.25</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Pathology Classes</span>
+              <span class="spec-value">5 Classes</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 2: Image Preview & Pre-Analysis Verification -->
+      <section id="screen-preview" class="screen-view">
+        <div class="screen-header-bar">
+          <button type="button" class="btn-back" id="btn-back-to-home">← Back</button>
+          <span class="screen-header-title">Confirm Image</span>
+          <div class="spacer"></div>
+        </div>
+
+        <div class="preview-viewport-card">
+          <div class="image-frame-container">
+            <img id="image-preview-element" src="" alt="Coconut Palm Preview" class="preview-img">
+          </div>
+          <div class="preview-meta-bar">
+            <span id="preview-file-name" class="meta-filename">image.jpg</span>
+            <span id="preview-file-size" class="meta-filesize">0 KB</span>
+          </div>
+        </div>
+
+        <div class="preview-actions">
+          <button type="button" class="btn-primary" id="btn-run-analysis">
+            <span class="btn-icon">🔬</span> Analyze Palm Health
+          </button>
+          <button type="button" class="btn-secondary" id="btn-retake-photo">Retake</button>
+        </div>
+
+        <!-- Progress Overlay (Shown during inference) -->
+        <div class="analysis-loading-overlay" id="loading-overlay">
+          <div class="loading-spinner"></div>
+          <h3 class="loading-title">Analyzing Coconut Tree...</h3>
+          <p class="loading-step" id="loading-step-text">Running YOLOv8 localized inference...</p>
+          <div class="loading-progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 3: Detection Results & Health Dashboard -->
+      <section id="screen-results" class="screen-view">
+        <div class="screen-header-bar">
+          <button type="button" class="btn-back" id="btn-back-to-preview">← New Scan</button>
+          <span class="screen-header-title">Diagnostic Results</span>
+          <button type="button" class="btn-save-session" id="btn-add-to-session">Save to Walk</button>
+        </div>
+
+        <!-- Visual Canvas Viewport with Bounding Boxes -->
+        <div class="result-canvas-card">
+          <div class="canvas-wrapper" id="canvas-wrapper">
+            <canvas id="detection-canvas" class="detection-canvas"></canvas>
+          </div>
+          <div class="canvas-controls">
+            <span class="canvas-hint">Touch lesions for details</span>
+            <div class="canvas-latency-tag">
+              <span id="result-latency-text">74.5 ms</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Health Status Summary Card -->
+        <div class="health-summary-card">
+          <div class="health-status-row">
+            <div>
+              <span class="summary-label">Observation Status</span>
+              <div class="status-pill-large" id="result-status-pill">DISEASE_DETECTED</div>
+            </div>
+            <div class="phi-gauge-mini">
+              <span class="phi-label">PHI Score</span>
+              <span class="phi-number" id="result-phi-score">92.1</span>
+              <span class="phi-scale">/ 100</span>
+            </div>
+          </div>
+
+          <div class="health-tier-box">
+            <div class="tier-label-row">
+              <span class="tier-caption">Assigned Health Tier:</span>
+              <span class="tier-name" id="result-tier-name">EXCELLENT</span>
+            </div>
+            <p class="tier-recommendation" id="result-recommendation">
+              Maintain routine prophylactic monitoring. No immediate systemic treatment required.
+            </p>
+          </div>
+
+          <!-- Impact Metrics Grid -->
+          <div class="impact-metrics-grid">
+            <div class="metric-card">
+              <span class="metric-val" id="result-confirmed-count">0</span>
+              <span class="metric-lbl">Confirmed Lesions</span>
+              <span class="metric-sub">(conf ≥ 0.25)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val" id="result-candidate-count">0</span>
+              <span class="metric-lbl">Candidates</span>
+              <span class="metric-sub">(0.10 ≤ conf &lt; 0.25)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val" id="result-area-proxy">0.0%</span>
+              <span class="metric-lbl">Affected Area</span>
+              <span class="metric-sub">(2D Union Proxy)</span>
+            </div>
+          </div>
+
+          <!-- Mandatory Engineering Disclaimer -->
+          <div class="disclaimer-alert">
+            <span class="disclaimer-icon">ℹ️</span>
+            <p class="disclaimer-text">
+              <strong>Engineering Notice:</strong> Health scores and affected area proxies represent 2D image-space visual indicators computed by the YOLOv8 research engine. They do not constitute certified agronomic or clinical pathology diagnosis.
+            </p>
+          </div>
+        </div>
+
+        <!-- Detected Lesions List Card -->
+        <div class="detections-list-card">
+          <h3 class="detections-header-title">Identified Lesion Records</h3>
+          <div class="detections-list" id="detections-container">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Action Footer -->
+        <div class="results-actions">
+          <button type="button" class="btn-primary" id="btn-scan-another">📷 Scan Another Palm</button>
+          <button type="button" class="btn-secondary" id="btn-view-plantation-report">View Plantation Report</button>
+        </div>
+      </section>
+
+      <!-- SCREEN 4: Plantation Scouting Walk Aggregate Report -->
+      <section id="screen-plantation" class="screen-view">
+        <div class="screen-header-bar">
+          <button type="button" class="btn-back" id="btn-back-from-plantation">← Back</button>
+          <span class="screen-header-title">Plantation Report</span>
+          <div class="spacer"></div>
+        </div>
+
+        <div class="plantation-summary-card">
+          <div class="plantation-meta">
+            <h3 class="plantation-block-title" id="report-plantation-id">BLOCK: COCO_NORTH_01</h3>
+            <span class="plantation-session-date" id="report-session-date">Session Date</span>
+          </div>
+
+          <div class="plantation-phi-box">
+            <div class="phi-main-score">
+              <span class="phi-large-val" id="report-phi-val">100.0</span>
+              <span class="phi-large-denom">/ 100</span>
+            </div>
+            <div class="phi-tier-badge" id="report-phi-tier">EXCELLENT</div>
+          </div>
+
+          <div class="plantation-stats-grid">
+            <div class="stat-box">
+              <span class="stat-num" id="report-total-palms">0</span>
+              <span class="stat-name">Palms Sampled</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num" id="report-pos-rate">0.0%</span>
+              <span class="stat-name">Infection Rate</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num" id="report-total-lesions">0</span>
+              <span class="stat-name">Total Lesions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disease Breakdown Table Card -->
+        <div class="pathology-table-card">
+          <h4 class="card-title">Pathology Occurrence Breakdown</h4>
+          <p class="card-subtitle">Decoupled Lesion Count (N_det) vs. Affected Palms (N_tree)</p>
+          
+          <div class="table-container">
+            <table class="pathology-table">
+              <thead>
+                <tr>
+                  <th>Pathology</th>
+                  <th>Lesions</th>
+                  <th>Palms</th>
+                  <th>Tree Rate</th>
+                </tr>
+              </thead>
+              <tbody id="pathology-table-body">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Export Actions -->
+        <div class="plantation-actions">
+          <button type="button" class="btn-primary" id="btn-export-json">📥 Export JSON Report</button>
+          <button type="button" class="btn-secondary" id="btn-reset-session">Reset Scouting Walk</button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Global Toast Notification Banner -->
+    <div id="toast-banner" class="toast-banner">
+      <span id="toast-message">Message</span>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

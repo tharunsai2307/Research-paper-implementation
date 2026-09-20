@@ -1,0 +1,3 @@
+model,experiment_id,dataset_version,split,images,instances,precision,recall,map50,map50_95,f1,latency_ms,fps,parameters,model_size_mb,confidence_threshold,iou_threshold,device,healthy_negatives_evaluated,healthy_false_positives,false_positive_rate
+YOLOv8n,EXP-001_baseline_yolov8n,v1.0.0-sanitized,test,15,12,0.816,0.4,0.6343,0.3663,0.5368,110.07,9.1,3006623,5.93,0.25,0.7,CPU (AMD Ryzen 5 7520U),5,0,0.0
+YOLOv8n,EXP-002_imgsz512,v1.0.0-sanitized,test,15,12,0.9044,0.4,0.6862,0.2471,0.5547,74.56,13.4,3006623,5.93,0.25,0.7,CPU (AMD Ryzen 5 7520U),5,0,0.0

@@ -1,0 +1,37 @@
+{
+  "dataset_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean",
+  "split_counts": {
+    "train": 100,
+    "val": 35,
+    "test": 15
+  },
+  "audit_parameters": {
+    "exact_duplicate_hash": "SHA-256",
+    "perceptual_hash": "dHash (difference hash, 8x8)",
+    "perceptual_hamming_threshold": 4
+  },
+  "cross_split_leakage_summary": {
+    "total_exact_duplicates": 0,
+    "total_perceptual_near_duplicates": 0,
+    "leakage_status": "PASSED - ZERO CROSS-SPLIT LEAKAGE"
+  },
+  "cross_split_details": {
+    "train_val": {
+      "exact": [],
+      "perceptual": []
+    },
+    "train_test": {
+      "exact": [],
+      "perceptual": []
+    },
+    "val_test": {
+      "exact": [],
+      "perceptual": []
+    }
+  },
+  "within_split_clusters": {
+    "train": 8,
+    "val": 38,
+    "test": 3
+  }
+}

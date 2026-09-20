@@ -1,0 +1,647 @@
+{
+  "meta": {
+    "phase": "Phase 4 \u2014 Final Model Evaluation & Research Analysis",
+    "date": "2026-09-20 04:30:13 UTC",
+    "dataset_version": "v1.0.0-sanitized",
+    "test_split_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\test",
+    "test_images": 15,
+    "test_diseased_images": 10,
+    "test_healthy_images": 5,
+    "test_annotations": 12,
+    "device": "CPU (AMD Ryzen 5 7520U)"
+  },
+  "model_evaluations": {
+    "EXP-001_baseline_yolov8n": {
+      "experiment_id": "EXP-001_baseline_yolov8n",
+      "model_checkpoint": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\outputs\\training\\EXP-001_baseline_yolov8n\\weights\\best.pt",
+      "imgsz": 640,
+      "conf_threshold": 0.25,
+      "iou_threshold": 0.7,
+      "test_images_count": 15,
+      "overall_metrics": {
+        "precision": 0.816,
+        "recall": 0.4,
+        "mAP50": 0.6343,
+        "mAP50_95": 0.3663,
+        "f1_score": 0.5368
+      },
+      "per_class_results": {
+        "bud root dropping": {
+          "ap50_95": 0.0,
+          "ap50": 0.0,
+          "precision": 1.0,
+          "recall": 0.0
+        },
+        "bud rot": {
+          "ap50_95": 0.6965,
+          "ap50": 0.995,
+          "precision": 0.5192,
+          "recall": 1.0
+        },
+        "gray leaf spot": {
+          "ap50_95": 0.0437,
+          "ap50": 0.1864,
+          "precision": 1.0,
+          "recall": 0.0
+        },
+        "leaf rot": {
+          "ap50_95": 0.461,
+          "ap50": 0.995,
+          "precision": 1.0,
+          "recall": 0.0
+        },
+        "stembleeding": {
+          "ap50_95": 0.6302,
+          "ap50": 0.995,
+          "precision": 0.5607,
+          "recall": 1.0
+        }
+      },
+      "latency_benchmark": {
+        "device": "CPU (AMD Ryzen 5 7520U)",
+        "mean_total_latency_ms": 110.07,
+        "estimated_fps": 9.1,
+        "test_images_timed": 15
+      },
+      "negative_control_findings": {
+        "total_healthy_test_images": 5,
+        "healthy_images_with_disease_prediction": 0,
+        "healthy_images_without_prediction": 5,
+        "false_positive_rate": 0.0,
+        "observations": []
+      },
+      "image_eval_records": [
+        {
+          "image": "BudRootDropping017.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud root dropping"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "BudRootDropping018.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud root dropping"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "BudRootDropping019.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud root dropping"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "BudRootDropping020.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud root dropping"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "BudRot015.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud rot"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "GrayLeafSpot015.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 2,
+          "ground_truth_classes": [
+            "gray leaf spot",
+            "gray leaf spot"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 2 ground truth disease box(es)."
+        },
+        {
+          "image": "GrayLeafSpot019.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 2,
+          "ground_truth_classes": [
+            "gray leaf spot",
+            "gray leaf spot"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 2 ground truth disease box(es)."
+        },
+        {
+          "image": "healthy_coconut_006.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "healthy_coconut_007.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "healthy_coconut_015.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "healthy_coconut_019.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "healthy_coconut_050.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "LeafRot005.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "leaf rot"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "LeafRot014.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "leaf rot"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "StemBleeding018.jpg",
+          "model": "EXP-001_baseline_yolov8n",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "stembleeding"
+          ],
+          "prediction_count": 1,
+          "predicted_classes": [
+            "stembleeding"
+          ],
+          "predicted_confidences": [
+            0.2953
+          ],
+          "error_type": "TRUE_POSITIVE_EXACT",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "All 1 ground truth boxes localized successfully."
+        }
+      ]
+    },
+    "EXP-002_imgsz512": {
+      "experiment_id": "EXP-002_imgsz512",
+      "model_checkpoint": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\outputs\\training\\EXP-002_imgsz512\\weights\\best.pt",
+      "imgsz": 512,
+      "conf_threshold": 0.25,
+      "iou_threshold": 0.7,
+      "test_images_count": 15,
+      "overall_metrics": {
+        "precision": 0.9044,
+        "recall": 0.4,
+        "mAP50": 0.6862,
+        "mAP50_95": 0.2471,
+        "f1_score": 0.5547
+      },
+      "per_class_results": {
+        "bud root dropping": {
+          "ap50_95": 0.0772,
+          "ap50": 0.1486,
+          "precision": 1.0,
+          "recall": 0.0
+        },
+        "bud rot": {
+          "ap50_95": 0.2985,
+          "ap50": 0.995,
+          "precision": 0.6323,
+          "recall": 1.0
+        },
+        "gray leaf spot": {
+          "ap50_95": 0.0546,
+          "ap50": 0.2974,
+          "precision": 1.0,
+          "recall": 0.0
+        },
+        "leaf rot": {
+          "ap50_95": 0.3862,
+          "ap50": 0.995,
+          "precision": 0.8899,
+          "recall": 1.0
+        },
+        "stembleeding": {
+          "ap50_95": 0.4189,
+          "ap50": 0.995,
+          "precision": 1.0,
+          "recall": 0.0
+        }
+      },
+      "latency_benchmark": {
+        "device": "CPU (AMD Ryzen 5 7520U)",
+        "mean_total_latency_ms": 74.56,
+        "estimated_fps": 13.4,
+        "test_images_timed": 15
+      },
+      "negative_control_findings": {
+        "total_healthy_test_images": 5,
+        "healthy_images_with_disease_prediction": 0,
+        "healthy_images_without_prediction": 5,
+        "false_positive_rate": 0.0,
+        "observations": []
+      },
+      "image_eval_records": [
+        {
+          "image": "BudRootDropping017.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud root dropping"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "BudRootDropping018.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud root dropping"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "BudRootDropping019.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud root dropping"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "BudRootDropping020.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud root dropping"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "BudRot015.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "bud rot"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        },
+        {
+          "image": "GrayLeafSpot015.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 2,
+          "ground_truth_classes": [
+            "gray leaf spot",
+            "gray leaf spot"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 2 ground truth disease box(es)."
+        },
+        {
+          "image": "GrayLeafSpot019.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 2,
+          "ground_truth_classes": [
+            "gray leaf spot",
+            "gray leaf spot"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 2 ground truth disease box(es)."
+        },
+        {
+          "image": "healthy_coconut_006.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "healthy_coconut_007.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "healthy_coconut_015.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "healthy_coconut_019.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "healthy_coconut_050.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": true,
+          "ground_truth_count": 0,
+          "ground_truth_classes": [],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "TRUE_NEGATIVE_HEALTHY",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "Correct background rejection (zero disease boxes predicted)."
+        },
+        {
+          "image": "LeafRot005.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "leaf rot"
+          ],
+          "prediction_count": 1,
+          "predicted_classes": [
+            "leaf rot"
+          ],
+          "predicted_confidences": [
+            0.3323
+          ],
+          "error_type": "TRUE_POSITIVE_EXACT",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "All 1 ground truth boxes localized successfully."
+        },
+        {
+          "image": "LeafRot014.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "leaf rot"
+          ],
+          "prediction_count": 2,
+          "predicted_classes": [
+            "leaf rot",
+            "leaf rot"
+          ],
+          "predicted_confidences": [
+            0.3625,
+            0.2982
+          ],
+          "error_type": "TRUE_POSITIVE_EXACT",
+          "false_positive": false,
+          "false_negative": false,
+          "localization_error": false,
+          "notes": "All 1 ground truth boxes localized successfully."
+        },
+        {
+          "image": "StemBleeding018.jpg",
+          "model": "EXP-002_imgsz512",
+          "is_healthy_negative": false,
+          "ground_truth_count": 1,
+          "ground_truth_classes": [
+            "stembleeding"
+          ],
+          "prediction_count": 0,
+          "predicted_classes": [],
+          "predicted_confidences": [],
+          "error_type": "FALSE_NEGATIVE_MISSED",
+          "false_positive": false,
+          "false_negative": true,
+          "localization_error": false,
+          "notes": "Missed 1 ground truth disease box(es)."
+        }
+      ]
+    }
+  }
+}

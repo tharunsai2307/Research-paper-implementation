@@ -1,0 +1,51 @@
+{
+  "dataset_name": "coconut_detection_clean",
+  "total_images": 150,
+  "total_annotations": 120,
+  "split_counts": {
+    "train": {
+      "images": 100,
+      "bboxes": 78,
+      "healthy_negatives": 37
+    },
+    "val": {
+      "images": 35,
+      "bboxes": 30,
+      "healthy_negatives": 8
+    },
+    "test": {
+      "images": 15,
+      "bboxes": 12,
+      "healthy_negatives": 5
+    }
+  },
+  "healthy_negative_statistics": {
+    "total_healthy_images": 50,
+    "percentage_of_dataset": 33.33,
+    "label_format": "empty .txt (zero bounding boxes, background control)"
+  },
+  "bounding_box_statistics": {
+    "average_boxes_per_image": 0.8,
+    "median_boxes_per_image": 1.0,
+    "min_boxes_per_image": 0,
+    "max_boxes_per_image": 2,
+    "images_with_zero_boxes": 50,
+    "images_with_multiple_classes": 0
+  },
+  "class_imbalance_analysis": {
+    "majority_class": "gray leaf spot",
+    "majority_boxes": 40,
+    "minority_class": "bud root dropping",
+    "minority_boxes": 20,
+    "imbalance_ratio": 2.0,
+    "is_severe": false,
+    "consequences": "Gray leaf spot has higher lesion frequency per image due to fungal spotting morphology, while stem bleeding and bud rot present fewer, larger lesion areas. Proposed Phase 3 mitigation includes class-weighted loss and mosaic/mixup data augmentation."
+  },
+  "disease_classes": [
+    "bud root dropping",
+    "bud rot",
+    "gray leaf spot",
+    "leaf rot",
+    "stembleeding"
+  ]
+}

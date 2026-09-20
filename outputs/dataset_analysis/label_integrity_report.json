@@ -1,0 +1,41 @@
+{
+  "dataset_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\raw\\roboflow_coconut_detection",
+  "total_label_files": 100,
+  "valid_label_files": 100,
+  "invalid_label_files": 0,
+  "total_bounding_boxes": 120,
+  "valid_bounding_boxes": 120,
+  "invalid_bounding_boxes": 0,
+  "invalid_coordinate_count": 0,
+  "unknown_class_count": 0,
+  "nan_inf_count": 0,
+  "empty_lines_count": 0,
+  "missing_label_count": 0,
+  "orphan_label_count": 0,
+  "splits": {
+    "train": {
+      "label_files": 70,
+      "valid_files": 70,
+      "invalid_files": 0,
+      "valid_boxes": 84,
+      "missing_labels": 0,
+      "orphan_labels": 0
+    },
+    "valid": {
+      "label_files": 20,
+      "valid_files": 20,
+      "invalid_files": 0,
+      "valid_boxes": 24,
+      "missing_labels": 0,
+      "orphan_labels": 0
+    },
+    "test": {
+      "label_files": 10,
+      "valid_files": 10,
+      "invalid_files": 0,
+      "valid_boxes": 12,
+      "missing_labels": 0,
+      "orphan_labels": 0
+    }
+  }
+}

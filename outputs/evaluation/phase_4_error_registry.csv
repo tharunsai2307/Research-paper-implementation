@@ -1,0 +1,31 @@
+image,model,is_healthy_negative,ground_truth_classes,predicted_classes,predicted_confidences,error_type,false_positive,false_negative,localization_error,notes
+BudRootDropping017.jpg,EXP-001_baseline_yolov8n,False,bud root dropping,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+BudRootDropping018.jpg,EXP-001_baseline_yolov8n,False,bud root dropping,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+BudRootDropping019.jpg,EXP-001_baseline_yolov8n,False,bud root dropping,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+BudRootDropping020.jpg,EXP-001_baseline_yolov8n,False,bud root dropping,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+BudRot015.jpg,EXP-001_baseline_yolov8n,False,bud rot,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+GrayLeafSpot015.jpg,EXP-001_baseline_yolov8n,False,gray leaf spot|gray leaf spot,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 2 ground truth disease box(es).
+GrayLeafSpot019.jpg,EXP-001_baseline_yolov8n,False,gray leaf spot|gray leaf spot,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 2 ground truth disease box(es).
+healthy_coconut_006.jpg,EXP-001_baseline_yolov8n,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+healthy_coconut_007.jpg,EXP-001_baseline_yolov8n,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+healthy_coconut_015.jpg,EXP-001_baseline_yolov8n,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+healthy_coconut_019.jpg,EXP-001_baseline_yolov8n,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+healthy_coconut_050.jpg,EXP-001_baseline_yolov8n,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+LeafRot005.jpg,EXP-001_baseline_yolov8n,False,leaf rot,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+LeafRot014.jpg,EXP-001_baseline_yolov8n,False,leaf rot,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+StemBleeding018.jpg,EXP-001_baseline_yolov8n,False,stembleeding,stembleeding,0.2953,TRUE_POSITIVE_EXACT,False,False,False,All 1 ground truth boxes localized successfully.
+BudRootDropping017.jpg,EXP-002_imgsz512,False,bud root dropping,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+BudRootDropping018.jpg,EXP-002_imgsz512,False,bud root dropping,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+BudRootDropping019.jpg,EXP-002_imgsz512,False,bud root dropping,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+BudRootDropping020.jpg,EXP-002_imgsz512,False,bud root dropping,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+BudRot015.jpg,EXP-002_imgsz512,False,bud rot,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).
+GrayLeafSpot015.jpg,EXP-002_imgsz512,False,gray leaf spot|gray leaf spot,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 2 ground truth disease box(es).
+GrayLeafSpot019.jpg,EXP-002_imgsz512,False,gray leaf spot|gray leaf spot,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 2 ground truth disease box(es).
+healthy_coconut_006.jpg,EXP-002_imgsz512,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+healthy_coconut_007.jpg,EXP-002_imgsz512,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+healthy_coconut_015.jpg,EXP-002_imgsz512,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+healthy_coconut_019.jpg,EXP-002_imgsz512,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+healthy_coconut_050.jpg,EXP-002_imgsz512,True,HEALTHY,NONE,NONE,TRUE_NEGATIVE_HEALTHY,False,False,False,Correct background rejection (zero disease boxes predicted).
+LeafRot005.jpg,EXP-002_imgsz512,False,leaf rot,leaf rot,0.3323,TRUE_POSITIVE_EXACT,False,False,False,All 1 ground truth boxes localized successfully.
+LeafRot014.jpg,EXP-002_imgsz512,False,leaf rot,leaf rot|leaf rot,0.3625|0.2982,TRUE_POSITIVE_EXACT,False,False,False,All 1 ground truth boxes localized successfully.
+StemBleeding018.jpg,EXP-002_imgsz512,False,stembleeding,NONE,NONE,FALSE_NEGATIVE_MISSED,False,True,False,Missed 1 ground truth disease box(es).

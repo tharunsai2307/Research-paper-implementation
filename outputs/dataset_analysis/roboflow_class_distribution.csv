@@ -1,0 +1,6 @@
+class_id,class_name,image_count,annotation_count,percentage
+0,bud root dropping,20,20,16.67%
+1,bud rot,20,20,16.67%
+2,gray leaf spot,20,40,33.33%
+3,leaf rot,20,20,16.67%
+4,stembleeding,20,20,16.67%

@@ -1,0 +1,32 @@
+{
+  "system": {
+    "os": "Windows",
+    "os_version": "Windows-11-10.0.26200-SP0",
+    "architecture": "AMD64",
+    "cpu": "AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD",
+    "cpu_physical_cores": 4,
+    "cpu_logical_cores": 8,
+    "total_ram_gb": 15.24
+  },
+  "acceleration": {
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu_name": null,
+    "gpu_vram_gb": null,
+    "execution_device": "cpu"
+  },
+  "python_runtime": {
+    "python_version": "3.14.4 (tags/v3.14.4:23116f9, Apr 7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "pytorch_version": "2.13.0+cpu",
+    "torchvision_version": "0.28.0",
+    "ultralytics_version": "8.4.115",
+    "opencv_version": "4.10.0.84",
+    "numpy_version": "2.5.1",
+    "pillow_version": "12.2.0",
+    "pandas_version": "3.0.5",
+    "matplotlib_version": "3.11.1",
+    "scipy_version": "1.18.1",
+    "scikit_learn_version": "1.9.0"
+  },
+  "recorded_at": "2026-09-20T09:30:00Z"
+}

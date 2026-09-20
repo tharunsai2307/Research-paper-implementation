@@ -1,0 +1,18 @@
+Metric,Value,Description / Units
+Plantation ID,DEMO_COCONUT_BLOCK_VAL_01,Field block identifier
+Engine Version,Phase-5-v1.0.0,Software version
+Operational Confidence Threshold,0.25,Detection confidence cutoff
+Total Submitted Observations,35,Photos submitted
+Successfully Processed Observations,35,Photos decoded and analyzed
+Disease-Positive Observations,3,Photos with confirmed target disease
+Disease-Negative Observations,27,Photos without confirmed disease
+Low-Confidence Candidate Observations,5,"Sub-threshold detections [0.10, 0.25)"
+Disease-Positive Image Rate (%),8.57,% of valid photos positive
+Mean Lesion Boxes Per Image,0.17,Mean box count per sampled palm
+Mean Affected Area Proxy (All),0.0395,Union lesion area / frame area
+Mean Affected Area Proxy (Positive Only),0.4607,Union lesion area / frame area
+Mean Detection Confidence,0.3201,Accepted detection confidence
+PHI Incidence Only Score,91.43,100 * (1 - PosRate)
+PHI Composite Score,92.12,100 * (1 - (0.85*PosRate + 0.15*AreaProxy))
+Assigned Health Tier,EXCELLENT / MINIMAL_DISEASE_PRESSURE,Categorical management tier
+Agronomic Recommendation,Maintain routine prophylactic monitoring. No immediate systemic treatment required.,Field action directive

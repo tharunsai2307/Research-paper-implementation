@@ -1,0 +1,7 @@
+class_id,class_name,train_images,val_images,test_images,total_images,train_bboxes,val_bboxes,test_bboxes,total_bboxes,percentage_of_total_bboxes
+0,bud root dropping,8,8,4,20,8,8,4,20,16.67
+1,bud rot,14,5,1,20,14,5,1,20,16.67
+2,gray leaf spot,15,3,2,20,30,6,4,40,33.33
+3,leaf rot,15,3,2,20,15,3,2,20,16.67
+4,stembleeding,11,8,1,20,11,8,1,20,16.67
+-1,healthy_negative (background control),37,8,5,50,0,0,0,0,0.0

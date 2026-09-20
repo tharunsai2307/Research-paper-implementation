@@ -1,0 +1,34 @@
+{
+  "splits_evaluated": [
+    "train",
+    "valid",
+    "test"
+  ],
+  "exact_cross_split_duplicates": [],
+  "near_duplicate_cross_split_pairs": [
+    {
+      "valid_file": "BudRootDropping017.jpg",
+      "test_file": "BudRootDropping019.jpg",
+      "hamming_distance": 3
+    },
+    {
+      "valid_file": "BudRootDropping018.jpg",
+      "test_file": "BudRootDropping019.jpg",
+      "hamming_distance": 1
+    }
+  ],
+  "summary_by_pair": {
+    "train_vs_valid": {
+      "exact_duplicates": 0,
+      "near_duplicates": 0
+    },
+    "train_vs_test": {
+      "exact_duplicates": 0,
+      "near_duplicates": 0
+    },
+    "valid_vs_test": {
+      "exact_duplicates": 0,
+      "near_duplicates": 2
+    }
+  }
+}

@@ -1,0 +1,1147 @@
+[
+  {
+    "image_id": "BudRootDropping001.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRootDropping001.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:43Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRootDropping002.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRootDropping002.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:43Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRootDropping003.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRootDropping003.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:43Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRootDropping004.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRootDropping004.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRootDropping005.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRootDropping005.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRootDropping006.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRootDropping006.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRootDropping007.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRootDropping007.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRootDropping008.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRootDropping008.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRot001.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRot001.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "LOW_CONFIDENCE_CANDIDATE",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 1,
+    "accepted_detections": [],
+    "candidate_detections": [
+      {
+        "class_id": 1,
+        "disease_class": "bud rot",
+        "confidence": 0.1691,
+        "bounding_box": {
+          "x1": 265.4,
+          "y1": 237.1,
+          "x2": 606.6,
+          "y2": 731.3
+        },
+        "normalized_box": {
+          "xc": 0.567684,
+          "yc": 0.47282,
+          "w": 0.444226,
+          "h": 0.482583
+        }
+      }
+    ],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRot002.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRot002.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "LOW_CONFIDENCE_CANDIDATE",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 1,
+    "accepted_detections": [],
+    "candidate_detections": [
+      {
+        "class_id": 1,
+        "disease_class": "bud rot",
+        "confidence": 0.1581,
+        "bounding_box": {
+          "x1": 265.6,
+          "y1": 228.6,
+          "x2": 615.6,
+          "y2": 733.3
+        },
+        "normalized_box": {
+          "xc": 0.573687,
+          "yc": 0.469665,
+          "w": 0.455685,
+          "h": 0.492811
+        }
+      }
+    ],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRot003.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRot003.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "LOW_CONFIDENCE_CANDIDATE",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 1,
+    "accepted_detections": [],
+    "candidate_detections": [
+      {
+        "class_id": 1,
+        "disease_class": "bud rot",
+        "confidence": 0.1434,
+        "bounding_box": {
+          "x1": 269.3,
+          "y1": 237.4,
+          "x2": 607.7,
+          "y2": 734.5
+        },
+        "normalized_box": {
+          "xc": 0.570947,
+          "yc": 0.474573,
+          "w": 0.44063,
+          "h": 0.485435
+        }
+      }
+    ],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRot011.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRot011.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "LOW_CONFIDENCE_CANDIDATE",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 2,
+    "accepted_detections": [],
+    "candidate_detections": [
+      {
+        "class_id": 1,
+        "disease_class": "bud rot",
+        "confidence": 0.1528,
+        "bounding_box": {
+          "x1": 277.0,
+          "y1": 120.5,
+          "x2": 619.1,
+          "y2": 627.2
+        },
+        "normalized_box": {
+          "xc": 0.58345,
+          "yc": 0.365102,
+          "w": 0.445432,
+          "h": 0.494884
+        }
+      },
+      {
+        "class_id": 1,
+        "disease_class": "bud rot",
+        "confidence": 0.1367,
+        "bounding_box": {
+          "x1": 328.2,
+          "y1": 83.0,
+          "x2": 681.8,
+          "y2": 638.8
+        },
+        "normalized_box": {
+          "xc": 0.657587,
+          "yc": 0.352432,
+          "w": 0.460466,
+          "h": 0.542787
+        }
+      }
+    ],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "BudRot012.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\BudRot012.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "LOW_CONFIDENCE_CANDIDATE",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 3,
+    "accepted_detections": [],
+    "candidate_detections": [
+      {
+        "class_id": 1,
+        "disease_class": "bud rot",
+        "confidence": 0.151,
+        "bounding_box": {
+          "x1": 276.4,
+          "y1": 124.9,
+          "x2": 622.1,
+          "y2": 631.8
+        },
+        "normalized_box": {
+          "xc": 0.584945,
+          "yc": 0.369485,
+          "w": 0.450056,
+          "h": 0.495105
+        }
+      },
+      {
+        "class_id": 1,
+        "disease_class": "bud rot",
+        "confidence": 0.136,
+        "bounding_box": {
+          "x1": 319.4,
+          "y1": 94.1,
+          "x2": 683.8,
+          "y2": 640.4
+        },
+        "normalized_box": {
+          "xc": 0.653145,
+          "yc": 0.358651,
+          "w": 0.4745,
+          "h": 0.533553
+        }
+      },
+      {
+        "class_id": 1,
+        "disease_class": "bud rot",
+        "confidence": 0.1178,
+        "bounding_box": {
+          "x1": 209.8,
+          "y1": 121.2,
+          "x2": 542.6,
+          "y2": 606.2
+        },
+        "normalized_box": {
+          "xc": 0.489877,
+          "yc": 0.355164,
+          "w": 0.433356,
+          "h": 0.473619
+        }
+      }
+    ],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "GrayLeafSpot009.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\GrayLeafSpot009.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:44Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "GrayLeafSpot011.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\GrayLeafSpot011.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:45Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "GrayLeafSpot016.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\GrayLeafSpot016.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:45Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "healthy_coconut_011.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\healthy_coconut_011.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:45Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 1280,
+    "image_height": 853,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "healthy_coconut_018.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\healthy_coconut_018.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:45Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 1280,
+    "image_height": 1083,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "healthy_coconut_023.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\healthy_coconut_023.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:45Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 800,
+    "image_height": 600,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "healthy_coconut_024.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\healthy_coconut_024.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:45Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 1280,
+    "image_height": 1916,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "healthy_coconut_025.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\healthy_coconut_025.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:45Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 1000,
+    "image_height": 1500,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "healthy_coconut_030.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\healthy_coconut_030.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:45Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 1280,
+    "image_height": 1920,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "healthy_coconut_041.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\healthy_coconut_041.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:46Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 1280,
+    "image_height": 1707,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "healthy_coconut_042.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\healthy_coconut_042.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:46Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 1280,
+    "image_height": 1707,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "LeafRot007.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\LeafRot007.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:46Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "DISEASE_DETECTED",
+    "accepted_detection_count": 1,
+    "candidate_detection_count": 2,
+    "accepted_detections": [
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.2997,
+        "bounding_box": {
+          "x1": 117.8,
+          "y1": 272.6,
+          "x2": 562.3,
+          "y2": 955.9
+        },
+        "normalized_box": {
+          "xc": 0.442793,
+          "yc": 0.599856,
+          "w": 0.578843,
+          "h": 0.667269
+        }
+      }
+    ],
+    "candidate_detections": [
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.1794,
+        "bounding_box": {
+          "x1": 170.3,
+          "y1": 271.4,
+          "x2": 640.8,
+          "y2": 897.2
+        },
+        "normalized_box": {
+          "xc": 0.528111,
+          "yc": 0.570589,
+          "w": 0.612632,
+          "h": 0.611177
+        }
+      },
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.1369,
+        "bounding_box": {
+          "x1": 240.8,
+          "y1": 281.4,
+          "x2": 704.7,
+          "y2": 944.6
+        },
+        "normalized_box": {
+          "xc": 0.615548,
+          "yc": 0.598623,
+          "w": 0.604045,
+          "h": 0.647586
+        }
+      }
+    ],
+    "detected_classes": [
+      "leaf rot"
+    ],
+    "relative_affected_area_proxy": 0.386244,
+    "confidence_summary": {
+      "mean": 0.2997,
+      "max": 0.2997,
+      "min": 0.2997
+    }
+  },
+  {
+    "image_id": "LeafRot012.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\LeafRot012.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:46Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "DISEASE_DETECTED",
+    "accepted_detection_count": 3,
+    "candidate_detection_count": 1,
+    "accepted_detections": [
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.3694,
+        "bounding_box": {
+          "x1": 104.5,
+          "y1": 266.5,
+          "x2": 565.4,
+          "y2": 975.0
+        },
+        "normalized_box": {
+          "xc": 0.436181,
+          "yc": 0.606209,
+          "w": 0.600103,
+          "h": 0.691929
+        }
+      },
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.3152,
+        "bounding_box": {
+          "x1": 243.7,
+          "y1": 279.8,
+          "x2": 705.0,
+          "y2": 964.8
+        },
+        "normalized_box": {
+          "xc": 0.617588,
+          "yc": 0.607693,
+          "w": 0.600665,
+          "h": 0.668982
+        }
+      },
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.2898,
+        "bounding_box": {
+          "x1": 319.0,
+          "y1": 298.8,
+          "x2": 768.0,
+          "y2": 945.4
+        },
+        "normalized_box": {
+          "xc": 0.707695,
+          "yc": 0.607542,
+          "w": 0.58461,
+          "h": 0.631463
+        }
+      }
+    ],
+    "candidate_detections": [
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.2376,
+        "bounding_box": {
+          "x1": 164.2,
+          "y1": 266.1,
+          "x2": 634.5,
+          "y2": 904.2
+        },
+        "normalized_box": {
+          "xc": 0.520047,
+          "yc": 0.571431,
+          "w": 0.612373,
+          "h": 0.623111
+        }
+      }
+    ],
+    "detected_classes": [
+      "leaf rot"
+    ],
+    "relative_affected_area_proxy": 0.588605,
+    "confidence_summary": {
+      "mean": 0.3248,
+      "max": 0.3694,
+      "min": 0.2898
+    }
+  },
+  {
+    "image_id": "LeafRot016.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\LeafRot016.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:46Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "DISEASE_DETECTED",
+    "accepted_detection_count": 2,
+    "candidate_detection_count": 2,
+    "accepted_detections": [
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.3238,
+        "bounding_box": {
+          "x1": 162.1,
+          "y1": 212.2,
+          "x2": 566.6,
+          "y2": 887.0
+        },
+        "normalized_box": {
+          "xc": 0.474407,
+          "yc": 0.536708,
+          "w": 0.526677,
+          "h": 0.658981
+        }
+      },
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.3229,
+        "bounding_box": {
+          "x1": 222.9,
+          "y1": 193.1,
+          "x2": 631.3,
+          "y2": 821.7
+        },
+        "normalized_box": {
+          "xc": 0.556161,
+          "yc": 0.495522,
+          "w": 0.531759,
+          "h": 0.613832
+        }
+      }
+    ],
+    "candidate_detections": [
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.1923,
+        "bounding_box": {
+          "x1": 131.4,
+          "y1": 264.9,
+          "x2": 513.7,
+          "y2": 957.0
+        },
+        "normalized_box": {
+          "xc": 0.419955,
+          "yc": 0.596635,
+          "w": 0.497788,
+          "h": 0.675932
+        }
+      },
+      {
+        "class_id": 3,
+        "disease_class": "leaf rot",
+        "confidence": 0.1251,
+        "bounding_box": {
+          "x1": 273.5,
+          "y1": 136.5,
+          "x2": 700.5,
+          "y2": 771.5
+        },
+        "normalized_box": {
+          "xc": 0.634152,
+          "yc": 0.443371,
+          "w": 0.556014,
+          "h": 0.620045
+        }
+      }
+    ],
+    "detected_classes": [
+      "leaf rot"
+    ],
+    "relative_affected_area_proxy": 0.407141,
+    "confidence_summary": {
+      "mean": 0.3234,
+      "max": 0.3238,
+      "min": 0.3229
+    }
+  },
+  {
+    "image_id": "StemBleeding004.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\StemBleeding004.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:46Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "StemBleeding005.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\StemBleeding005.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:46Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "StemBleeding006.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\StemBleeding006.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:46Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "StemBleeding007.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\StemBleeding007.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:46Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "StemBleeding008.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\StemBleeding008.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:47Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "StemBleeding009.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\StemBleeding009.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:47Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "StemBleeding010.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\StemBleeding010.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:47Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  },
+  {
+    "image_id": "StemBleeding011.jpg",
+    "image_path": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\processed\\coconut_detection_clean\\val\\images\\StemBleeding011.jpg",
+    "plantation_id": "DEMO_COCONUT_BLOCK_VAL_01",
+    "timestamp": "2026-09-20T04:38:47Z",
+    "gps_location": null,
+    "model_id": "EXP-002_imgsz512",
+    "model_input_size": 512,
+    "image_width": 768,
+    "image_height": 1024,
+    "observation_status": "NO_DISEASE_DETECTED",
+    "accepted_detection_count": 0,
+    "candidate_detection_count": 0,
+    "accepted_detections": [],
+    "candidate_detections": [],
+    "detected_classes": [],
+    "relative_affected_area_proxy": 0.0,
+    "confidence_summary": {
+      "mean": 0.0,
+      "max": 0.0,
+      "min": 0.0
+    }
+  }
+]

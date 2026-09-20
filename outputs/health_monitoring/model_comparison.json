@@ -1,0 +1,31 @@
+{
+  "dataset_block": "images",
+  "total_images": 35,
+  "operational_confidence_threshold": 0.25,
+  "candidate_confidence_threshold": 0.1,
+  "model_a_exp001": {
+    "checkpoint": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\outputs\\training\\EXP-001_baseline_yolov8n\\weights\\best.pt",
+    "input_size": 640,
+    "total_accepted_detections": 0,
+    "disease_positive_images": 0,
+    "disease_positive_rate_pct": 0.0,
+    "mean_affected_area_proxy_pos": 0.0,
+    "mean_confidence": 0.0,
+    "phi_composite": 100.0,
+    "phi_incidence": 100.0,
+    "health_tier": "EXCELLENT / MINIMAL_DISEASE_PRESSURE"
+  },
+  "model_b_exp002": {
+    "checkpoint": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\outputs\\training\\EXP-002_imgsz512\\weights\\best.pt",
+    "input_size": 512,
+    "total_accepted_detections": 6,
+    "disease_positive_images": 3,
+    "disease_positive_rate_pct": 8.57,
+    "mean_affected_area_proxy_pos": 0.4607,
+    "mean_confidence": 0.3201,
+    "phi_composite": 92.12,
+    "phi_incidence": 91.43,
+    "health_tier": "EXCELLENT / MINIMAL_DISEASE_PRESSURE"
+  },
+  "comparative_insights": "Model A (640x640) vs Model B (512x512) reflects standard image-resolution trade-offs. Higher resolution preserves fine-grained lesion boundaries (higher detection count), whereas 512x512 reduces computational footprint suitable for resource-constrained mobile runtimes."
+}

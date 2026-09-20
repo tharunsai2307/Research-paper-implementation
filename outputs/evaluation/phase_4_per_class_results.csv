@@ -1,0 +1,11 @@
+model,class,test_images,test_instances,precision,recall,ap50,ap50_95
+EXP-001_baseline_yolov8n,bud root dropping,4,4,1.0,0.0,0.0,0.0
+EXP-001_baseline_yolov8n,bud rot,1,1,0.5192,1.0,0.995,0.6965
+EXP-001_baseline_yolov8n,gray leaf spot,2,4,1.0,0.0,0.1864,0.0437
+EXP-001_baseline_yolov8n,leaf rot,2,2,1.0,0.0,0.995,0.461
+EXP-001_baseline_yolov8n,stembleeding,1,1,0.5607,1.0,0.995,0.6302
+EXP-002_imgsz512,bud root dropping,4,4,1.0,0.0,0.1486,0.0772
+EXP-002_imgsz512,bud rot,1,1,0.6323,1.0,0.995,0.2985
+EXP-002_imgsz512,gray leaf spot,2,4,1.0,0.0,0.2974,0.0546
+EXP-002_imgsz512,leaf rot,2,2,0.8899,1.0,0.995,0.3862
+EXP-002_imgsz512,stembleeding,1,1,1.0,0.0,0.995,0.4189

@@ -1,0 +1,40 @@
+{
+  "dataset_root": "C:\\Users\\Hp\\.gemini\\antigravity-ide\\scratch\\coconut-disease-yolov8\\data\\raw\\mendeley_coconut_disease",
+  "total_images": 100,
+  "valid_images": 100,
+  "corrupted_images": 0,
+  "unreadable_images": 0,
+  "duplicate_filename_groups": 0,
+  "class_distribution": {
+    "Bud Root Dropping": 20,
+    "Bud Rot": 20,
+    "Gray Leaf Spot": 20,
+    "Leaf Rot": 20,
+    "Stem Bleeding": 20
+  },
+  "image_formats": {
+    "JPEG": 100
+  },
+  "dimension_statistics": {
+    "min_resolution": "768x1024",
+    "max_resolution": "768x1024",
+    "mean_width": 768.0,
+    "mean_height": 1024.0,
+    "median_width": 768.0,
+    "median_height": 1024.0,
+    "unique_resolutions": 1
+  },
+  "annotation_statistics": {
+    "annotations_found": false,
+    "total_annotation_files": 0,
+    "empty_annotations": 0,
+    "malformed_annotations": 0,
+    "total_bounding_boxes": 0,
+    "mean_bboxes_per_image": 0.0,
+    "mean_normalized_bbox_area": 0.0,
+    "class_bbox_distribution": {}
+  },
+  "corrupted_details": [],
+  "unreadable_details": [],
+  "duplicate_details": {}
+}
