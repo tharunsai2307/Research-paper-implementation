@@ -1,7 +1,7 @@
 {
   "timestamp": "2026-09-20T06:20:00Z",
   "audit_status": "AWAITING_REAL_MASKS",
-  "phase": 10,
+  "phase": 11,
   "total_registered_images": 100,
   "images_with_valid_masks": 0,
   "formula": "gamma = bbox_area / mask_area",

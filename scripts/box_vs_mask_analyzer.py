@@ -55,28 +55,33 @@ def calculate_box_vs_mask_metrics(
         "status": "COMPUTED"
     }
 
-def run_box_vs_mask_audit(output_path: Optional[Path] = None) -> Dict[str, Any]:
+def run_box_vs_mask_audit(output_path: Optional[Path] = None, phase: int = 11) -> Dict[str, Any]:
     if output_path is None:
-        output_path = PROJECT_ROOT / "outputs/phase_10/evaluation/box_vs_mask_analysis.json"
+        output_path = PROJECT_ROOT / f"outputs/phase_{phase}/evaluation/box_vs_mask_analysis.json"
         
-    seg_dir = PROJECT_ROOT / "data/external/phase_9_segmentation"
-    manifest_path = seg_dir / "metadata/annotation_manifest.csv"
-    annotations_dir = seg_dir / "annotations"
+    p11_ann_dir = PROJECT_ROOT / "data/external/phase_11_segmentation/annotations/annotator_A"
+    p9_ann_dir = PROJECT_ROOT / "data/external/phase_9_segmentation/annotations"
     
     # Audit registered images
     total_registered = 100
-    images_with_masks = len(list(annotations_dir.glob("*.txt"))) if annotations_dir.exists() else 0
+    p11_masks = list(p11_ann_dir.glob("*.txt")) if p11_ann_dir.exists() else []
+    p9_masks = list(p9_ann_dir.glob("*.txt")) if p9_ann_dir.exists() else []
+    images_with_masks = len(p11_masks) if p11_masks else len(p9_masks)
     
     if images_with_masks == 0:
         result = {
-            "timestamp": "2026-09-20T06:10:00Z",
+            "timestamp": "2026-09-20T06:20:00Z",
             "audit_status": "AWAITING_REAL_MASKS",
+            "phase": phase,
             "total_registered_images": total_registered,
             "images_with_valid_masks": 0,
             "formula": "gamma = bbox_area / mask_area",
             "gamma_summary": {
                 "mean_gamma": None,
                 "median_gamma": None,
+                "std_gamma": None,
+                "min_gamma": None,
+                "max_gamma": None,
                 "per_class_gamma": {
                     "bud root dropping": None,
                     "bud rot": None,
@@ -89,8 +94,9 @@ def run_box_vs_mask_audit(output_path: Optional[Path] = None) -> Dict[str, Any]:
         }
     else:
         result = {
-            "timestamp": "2026-09-20T06:10:00Z",
+            "timestamp": "2026-09-20T06:20:00Z",
             "audit_status": "COMPUTED",
+            "phase": phase,
             "total_registered_images": total_registered,
             "images_with_valid_masks": images_with_masks,
             "gamma_summary": {}
@@ -103,6 +109,7 @@ def run_box_vs_mask_audit(output_path: Optional[Path] = None) -> Dict[str, Any]:
     return result
 
 if __name__ == "__main__":
-    res = run_box_vs_mask_audit()
-    print("=== BOX VS MASK AUDIT ===")
-    print(json.dumps(res, indent=2))
+    res10 = run_box_vs_mask_audit(phase=10)
+    res11 = run_box_vs_mask_audit(phase=11)
+    print("=== PHASE 11 BOX VS MASK AUDIT ===")
+    print(json.dumps(res11, indent=2))

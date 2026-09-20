@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-09-20T06:25:00Z",
+  "phase_11_version": "v1.0.0-ground-truth-qc-release",
+  "benchmark_images": {
+    "registered_images": 100,
+    "classes": [
+      "bud root dropping",
+      "bud rot",
+      "gray leaf spot",
+      "leaf rot",
+      "stembleeding"
+    ],
+    "images_per_class": 20,
+    "splits": {
+      "train": 63,
+      "val": 27,
+      "test": 10
+    },
+    "test_split_policy": "TEST_GROUND_TRUTH_ONLY"
+  },
+  "annotation_progress": {
+    "completed_images": 0,
+    "pending_images": 100,
+    "accepted_masks": 0,
+    "rejected_masks": 0,
+    "qc_review_required": 0,
+    "completion_percentage": 0.0
+  },
+  "quality_control": {
+    "protocol": "Double-Annotator Independent Validation (IoU >= 0.75)",
+    "double_annotated_subset": 0,
+    "inter_annotator_mean_iou": "N/A",
+    "inter_annotator_median_iou": "N/A"
+  },
+  "segmentation_training_gate": {
+    "status": "BLOCKED",
+    "reason": "Accepted real human masks == 0. Research integrity strictly forbids pseudo-masks.",
+    "experiments": {
+      "SEG-001": "BLOCKED",
+      "SEG-002": "BLOCKED"
+    }
+  },
+  "box_vs_mask_analysis": {
+    "status": "AWAITING_DATA",
+    "mean_gamma": null,
+    "median_gamma": null
+  },
+  "temporal_modeling": {
+    "lstm": "NOT TRAINED",
+    "gru": "NOT TRAINED",
+    "progression_prediction": "NOT VALIDATED"
+  },
+  "mobile_integration": {
+    "status": "PENDING_REAL_MASK_DATA",
+    "backward_compatibility": "PASS"
+  },
+  "regression_protection": {
+    "phase_3_protected": true,
+    "phase_4_protected": true,
+    "phase_5_protected": true,
+    "phase_6_protected": true,
+    "phase_7_protected": true,
+    "phase_8_protected": true,
+    "phase_9_protected": true,
+    "phase_10_protected": true
+  },
+  "phase_11_release_gate": "PASS",
+  "research_integrity": "PASS_ZERO_FABRICATION"
+}

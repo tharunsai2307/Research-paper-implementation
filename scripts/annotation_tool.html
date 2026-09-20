@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coconut Disease Polygon Annotation Tool — Phase 10</title>
+  <title>Coconut Disease Human Polygon Annotation Tool — Phase 11</title>
   <style>
     :root {
       --bg-primary: #0f172a;
@@ -14,6 +14,7 @@
       --border: #334155;
       --danger: #ef4444;
       --warning: #f59e0b;
+      --info: #38bdf8;
     }
     body {
       margin: 0;
@@ -28,7 +29,7 @@
     header {
       background: var(--bg-secondary);
       border-bottom: 1px solid var(--border);
-      padding: 12px 24px;
+      padding: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -54,13 +55,13 @@
       overflow: hidden;
     }
     .sidebar {
-      width: 320px;
+      width: 340px;
       background: var(--bg-secondary);
       border-right: 1px solid var(--border);
       display: flex;
       flex-direction: column;
-      padding: 16px;
-      gap: 16px;
+      padding: 14px;
+      gap: 12px;
       overflow-y: auto;
     }
     .canvas-container {
@@ -71,16 +72,16 @@
       justify-content: center;
       position: relative;
       background: #020617;
-      padding: 20px;
-      overflow: auto;
+      padding: 10px;
+      overflow: hidden;
     }
     .control-group {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 5px;
     }
     label {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 600;
       color: var(--text-muted);
       text-transform: uppercase;
@@ -90,9 +91,9 @@
       background: #0f172a;
       border: 1px solid var(--border);
       color: var(--text-main);
-      padding: 8px 12px;
+      padding: 7px 10px;
       border-radius: 6px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       outline: none;
     }
     select:focus, input:focus {
@@ -111,91 +112,100 @@
     button.primary:hover {
       background: #059669;
     }
+    button.secondary {
+      background: #334155;
+      color: var(--text-main);
+    }
     button.danger {
       background: var(--danger);
       color: #fff;
       border: none;
     }
-    button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
+    .nav-buttons {
+      display: flex;
+      gap: 8px;
+    }
+    .nav-buttons button {
+      flex: 1;
     }
     .alert-box {
       background: rgba(239, 68, 68, 0.1);
       border: 1px solid rgba(239, 68, 68, 0.3);
       color: #fca5a5;
-      padding: 10px;
+      padding: 8px;
       border-radius: 6px;
-      font-size: 0.8rem;
-      line-height: 1.4;
+      font-size: 0.75rem;
+      line-height: 1.3;
     }
     .info-box {
       background: rgba(16, 185, 129, 0.1);
       border: 1px solid rgba(16, 185, 129, 0.3);
       color: #6ee7b7;
-      padding: 10px;
+      padding: 8px;
       border-radius: 6px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       line-height: 1.4;
     }
     canvas {
       border: 1px solid var(--border);
       border-radius: 4px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
       cursor: crosshair;
     }
-    .status-bar {
-      font-family: monospace;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 10px;
+    .toolbar {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      gap: 10px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
+    }
+    .toolbar button {
+      padding: 4px 10px;
+      font-size: 0.8rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>
-      <span>🌴 Coconut Disease Manual Polygon Annotation Interface</span>
-      <span class="badge">Phase 10 Integrity Gate Active</span>
+      <span>🌴 Human Polygon Annotation Tool</span>
+      <span class="badge">Phase 11 Double-Annotator QC</span>
     </h1>
-    <div style="font-size: 0.85rem; color: var(--text-muted);">
-      Protocol: Phase 8 / 10 Phytopathology Specification
+    <div style="font-size: 0.8rem; color: var(--text-muted);">
+      Target QC Threshold: IoU ≥ 0.75 (Phytopathology Specification)
     </div>
   </header>
 
   <div class="main-container">
     <div class="sidebar">
       <div class="alert-box">
-        ⚠️ <strong>Research Integrity Gate</strong>: Auto-filling detection bounding boxes is strictly forbidden. Annotators must manually trace visible necrotic lesion margins.
+        ⚠️ <strong>Strict Rule</strong>: Never auto-fill bounding boxes. Tracing must strictly follow the necrotic lesion margin.
       </div>
 
       <div class="control-group">
-        <label>1. Select Image (100 Benchmark)</label>
-        <select id="imageSelect">
-          <option value="">-- Choose Image --</option>
-          <optgroup label="Bud Root Dropping (20)">
-            <option value="BudRootDropping001.jpg">BudRootDropping001.jpg</option>
-            <option value="BudRootDropping002.jpg">BudRootDropping002.jpg</option>
-            <option value="BudRootDropping003.jpg">BudRootDropping003.jpg</option>
-          </optgroup>
-          <optgroup label="Bud Rot (20)">
-            <option value="BudRot001.jpg">BudRot001.jpg</option>
-            <option value="BudRot002.jpg">BudRot002.jpg</option>
-          </optgroup>
-          <optgroup label="Gray Leaf Spot (20)">
-            <option value="GrayLeafSpot001.jpg">GrayLeafSpot001.jpg</option>
-          </optgroup>
-          <optgroup label="Leaf Rot (20)">
-            <option value="LeafRot001.jpg">LeafRot001.jpg</option>
-          </optgroup>
-          <optgroup label="Stem Bleeding (20)">
-            <option value="StemBleeding001.jpg">StemBleeding001.jpg</option>
-          </optgroup>
+        <label>Image Navigation</label>
+        <div class="nav-buttons">
+          <button id="btnPrev" class="secondary">◀ Previous</button>
+          <button id="btnNext" class="secondary">Next ▶</button>
+        </div>
+        <select id="imageSelect" style="margin-top: 4px;"></select>
+      </div>
+
+      <div class="control-group">
+        <label>Annotator Role & Cohort</label>
+        <select id="annotatorRole">
+          <option value="annotator_A">Annotator A (Primary Annotation)</option>
+          <option value="annotator_B">Annotator B (Independent Double QC)</option>
+          <option value="reviewer">Reviewer (Consensus Adjudication)</option>
         </select>
+        <input type="text" id="annotatorId" value="AGRONOMIST_A_01" placeholder="Annotator ID">
       </div>
 
       <div class="control-group">
-        <label>2. Disease Class</label>
+        <label>Disease Category</label>
         <select id="classSelect">
           <option value="0">0: bud root dropping</option>
           <option value="1">1: bud rot</option>
@@ -206,40 +216,28 @@
       </div>
 
       <div class="control-group">
-        <label>3. Annotator ID</label>
-        <input type="text" id="annotatorId" value="AGRONOMIST_LEAD_01" placeholder="e.g. AGRONOMIST_01">
-      </div>
-
-      <div class="control-group">
-        <label>4. AI Assistance Provenance</label>
-        <select id="aiAssisted">
-          <option value="false">No (Pure Manual Delineation)</option>
-          <option value="true">Yes (AI Proposal + Human Correction & Verification)</option>
-        </select>
-      </div>
-
-      <hr style="border: 0; border-top: 1px solid var(--border); width: 100%;">
-
-      <div class="control-group">
         <label>Actions</label>
         <button id="btnCompletePoly" class="primary">Close & Complete Polygon</button>
         <button id="btnUndo">Undo Last Vertex</button>
-        <button id="btnClear" class="danger">Clear All Vertices</button>
+        <button id="btnClear" class="danger">Clear Polygon</button>
       </div>
 
       <div class="info-box" id="polyInfo">
         Vertices: 0<br>
         Normalized Area: 0.0000<br>
-        Status: Drawing in progress
+        Status: Ready to delineate
       </div>
 
-      <button id="btnExport" class="primary" style="margin-top: auto;">Save & Export Annotation</button>
+      <button id="btnExport" class="primary" style="margin-top: auto;">Export YOLO Segmentation Polygon</button>
     </div>
 
-    <div class="canvas-container">
-      <canvas id="annotationCanvas" width="640" height="640"></canvas>
-      <div class="status-bar" id="statusBar">
-        Click on lesion boundary to place vertices. Minimum 3 required.
+    <div class="canvas-container" id="container">
+      <canvas id="annotationCanvas" width="700" height="700"></canvas>
+      <div class="toolbar">
+        <button id="btnZoomIn">Zoom In (+)</button>
+        <button id="btnZoomOut">Zoom Out (-)</button>
+        <button id="btnResetView">Reset View</button>
+        <span id="zoomLevel" style="font-family: monospace; font-size: 0.8rem; align-self: center;">100%</span>
       </div>
     </div>
   </div>
@@ -249,14 +247,57 @@
     const ctx = canvas.getContext('2d');
     let points = [];
     let isClosed = false;
+    let zoom = 1.0;
+    let panX = 0, panY = 0;
 
-    // Canvas click handler
+    // Populate image list (100 benchmark images)
+    const prefixes = [
+      { name: "BudRootDropping", count: 20, cls: 0 },
+      { name: "BudRot", count: 20, cls: 1 },
+      { name: "GrayLeafSpot", count: 20, cls: 2 },
+      { name: "LeafRot", count: 20, cls: 3 },
+      { name: "StemBleeding", count: 20, cls: 4 }
+    ];
+    const imageList = [];
+    const select = document.getElementById('imageSelect');
+    prefixes.forEach(p => {
+      for (let i = 1; i <= p.count; i++) {
+        const id = `${p.name}${String(i).padStart(3, '0')}.jpg`;
+        imageList.push({ id, cls: p.cls });
+        const opt = document.createElement('option');
+        opt.value = id;
+        opt.textContent = id;
+        select.appendChild(opt);
+      }
+    });
+
+    let currentIdx = 0;
+    function selectImage(idx) {
+      currentIdx = Math.max(0, Math.min(imageList.length - 1, idx));
+      select.value = imageList[currentIdx].id;
+      document.getElementById('classSelect').value = imageList[currentIdx].cls;
+      points = [];
+      isClosed = false;
+      draw();
+      updateInfo();
+    }
+
+    document.getElementById('btnPrev').addEventListener('click', () => selectImage(currentIdx - 1));
+    document.getElementById('btnNext').addEventListener('click', () => selectImage(currentIdx + 1));
+    select.addEventListener('change', (e) => {
+      const idx = imageList.findIndex(item => item.id === e.target.value);
+      if (idx !== -1) selectImage(idx);
+    });
+
     canvas.addEventListener('click', (e) => {
       if (isClosed) return;
       const rect = canvas.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / canvas.width;
-      const y = (e.clientY - rect.top) / canvas.height;
-      points.push([Math.max(0, Math.min(1, x)), Math.max(0, Math.min(1, y))]);
+      const rawX = (e.clientX - rect.left);
+      const rawY = (e.clientY - rect.top);
+      
+      const normX = Math.max(0, Math.min(1, rawX / canvas.width));
+      const normY = Math.max(0, Math.min(1, rawY / canvas.height));
+      points.push([normX, normY]);
       draw();
       updateInfo();
     });
@@ -285,6 +326,24 @@
       }
     });
 
+    document.getElementById('btnZoomIn').addEventListener('click', () => {
+      zoom = Math.min(3.0, zoom + 0.25);
+      updateZoom();
+    });
+    document.getElementById('btnZoomOut').addEventListener('click', () => {
+      zoom = Math.max(0.5, zoom - 0.25);
+      updateZoom();
+    });
+    document.getElementById('btnResetView').addEventListener('click', () => {
+      zoom = 1.0;
+      updateZoom();
+    });
+
+    function updateZoom() {
+      canvas.style.transform = `scale(${zoom})`;
+      document.getElementById('zoomLevel').textContent = `${Math.round(zoom * 100)}%`;
+    }
+
     function calculateArea() {
       if (points.length < 3) return 0;
       let a = 0;
@@ -299,6 +358,7 @@
     function updateInfo() {
       const area = calculateArea();
       document.getElementById('polyInfo').innerHTML = `
+        Image: <strong>${imageList[currentIdx].id}</strong><br>
         Vertices: ${points.length}<br>
         Normalized Area: ${area.toFixed(5)}<br>
         Status: ${isClosed ? '<span style="color:#6ee7b7">Closed & Ready</span>' : 'Delineating'}
@@ -309,17 +369,16 @@
       ctx.fillStyle = '#020617';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
-      // Grid lines for reference
+      // Grid
       ctx.strokeStyle = '#1e293b';
       ctx.lineWidth = 1;
-      for (let i = 0; i < canvas.width; i += 64) {
+      for (let i = 0; i < canvas.width; i += 70) {
         ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, canvas.height); ctx.stroke();
         ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(canvas.width, i); ctx.stroke();
       }
 
       if (points.length === 0) return;
 
-      // Draw edges
       ctx.strokeStyle = '#10b981';
       ctx.lineWidth = 2;
       ctx.beginPath();
@@ -334,7 +393,6 @@
       }
       ctx.stroke();
 
-      // Draw vertices
       for (let i = 0; i < points.length; i++) {
         ctx.fillStyle = (i === 0) ? '#f59e0b' : '#38bdf8';
         ctx.beginPath();
@@ -351,11 +409,10 @@
       const classId = document.getElementById('classSelect').value;
       const flat = points.map(p => `${p[0].toFixed(6)} ${p[1].toFixed(6)}`).join(' ');
       const yoloLine = `${classId} ${flat}`;
-      
-      prompt("YOLO Segmentation Polygon String (Copy to annotation file):", yoloLine);
+      prompt("YOLO Segmentation Polygon String for " + imageList[currentIdx].id + ":", yoloLine);
     });
 
-    draw();
+    selectImage(0);
   </script>
 </body>
 </html>

@@ -1,0 +1,101 @@
+image_id,disease_class,split,annotator_A_status,annotator_B_status,qc_status,acceptance_status
+BudRootDropping001.jpg,bud root dropping,val,PENDING,PENDING,PENDING,PENDING
+BudRootDropping002.jpg,bud root dropping,val,PENDING,PENDING,PENDING,PENDING
+BudRootDropping003.jpg,bud root dropping,val,PENDING,PENDING,PENDING,PENDING
+BudRootDropping004.jpg,bud root dropping,val,PENDING,PENDING,PENDING,PENDING
+BudRootDropping005.jpg,bud root dropping,val,PENDING,PENDING,PENDING,PENDING
+BudRootDropping006.jpg,bud root dropping,val,PENDING,PENDING,PENDING,PENDING
+BudRootDropping007.jpg,bud root dropping,val,PENDING,PENDING,PENDING,PENDING
+BudRootDropping008.jpg,bud root dropping,val,PENDING,PENDING,PENDING,PENDING
+BudRootDropping009.jpg,bud root dropping,train,PENDING,PENDING,PENDING,PENDING
+BudRootDropping010.jpg,bud root dropping,train,PENDING,PENDING,PENDING,PENDING
+BudRootDropping011.jpg,bud root dropping,train,PENDING,PENDING,PENDING,PENDING
+BudRootDropping012.jpg,bud root dropping,train,PENDING,PENDING,PENDING,PENDING
+BudRootDropping013.jpg,bud root dropping,train,PENDING,PENDING,PENDING,PENDING
+BudRootDropping014.jpg,bud root dropping,train,PENDING,PENDING,PENDING,PENDING
+BudRootDropping015.jpg,bud root dropping,train,PENDING,PENDING,PENDING,PENDING
+BudRootDropping016.jpg,bud root dropping,train,PENDING,PENDING,PENDING,PENDING
+BudRootDropping017.jpg,bud root dropping,test,PENDING,PENDING,PENDING,PENDING
+BudRootDropping018.jpg,bud root dropping,test,PENDING,PENDING,PENDING,PENDING
+BudRootDropping019.jpg,bud root dropping,test,PENDING,PENDING,PENDING,PENDING
+BudRootDropping020.jpg,bud root dropping,test,PENDING,PENDING,PENDING,PENDING
+BudRot001.jpg,bud rot,val,PENDING,PENDING,PENDING,PENDING
+BudRot002.jpg,bud rot,val,PENDING,PENDING,PENDING,PENDING
+BudRot003.jpg,bud rot,val,PENDING,PENDING,PENDING,PENDING
+BudRot004.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot005.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot006.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot007.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot008.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot009.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot010.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot011.jpg,bud rot,val,PENDING,PENDING,PENDING,PENDING
+BudRot012.jpg,bud rot,val,PENDING,PENDING,PENDING,PENDING
+BudRot013.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot014.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot015.jpg,bud rot,test,PENDING,PENDING,PENDING,PENDING
+BudRot016.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot017.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot018.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot019.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+BudRot020.jpg,bud rot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot001.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot002.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot003.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot004.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot005.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot006.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot007.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot008.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot009.jpg,gray leaf spot,val,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot010.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot011.jpg,gray leaf spot,val,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot012.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot013.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot014.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot015.jpg,gray leaf spot,test,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot016.jpg,gray leaf spot,val,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot017.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot018.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot019.jpg,gray leaf spot,test,PENDING,PENDING,PENDING,PENDING
+GrayLeafSpot020.jpg,gray leaf spot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot001.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot002.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot003.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot004.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot005.jpg,leaf rot,test,PENDING,PENDING,PENDING,PENDING
+LeafRot006.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot007.jpg,leaf rot,val,PENDING,PENDING,PENDING,PENDING
+LeafRot008.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot009.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot010.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot011.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot012.jpg,leaf rot,val,PENDING,PENDING,PENDING,PENDING
+LeafRot013.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot014.jpg,leaf rot,test,PENDING,PENDING,PENDING,PENDING
+LeafRot015.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot016.jpg,leaf rot,val,PENDING,PENDING,PENDING,PENDING
+LeafRot017.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot018.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot019.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+LeafRot020.jpg,leaf rot,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding001.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding002.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding003.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding004.jpg,stembleeding,val,PENDING,PENDING,PENDING,PENDING
+StemBleeding005.jpg,stembleeding,val,PENDING,PENDING,PENDING,PENDING
+StemBleeding006.jpg,stembleeding,val,PENDING,PENDING,PENDING,PENDING
+StemBleeding007.jpg,stembleeding,val,PENDING,PENDING,PENDING,PENDING
+StemBleeding008.jpg,stembleeding,val,PENDING,PENDING,PENDING,PENDING
+StemBleeding009.jpg,stembleeding,val,PENDING,PENDING,PENDING,PENDING
+StemBleeding010.jpg,stembleeding,val,PENDING,PENDING,PENDING,PENDING
+StemBleeding011.jpg,stembleeding,val,PENDING,PENDING,PENDING,PENDING
+StemBleeding012.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding013.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding014.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding015.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding016.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding017.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding018.jpg,stembleeding,test,PENDING,PENDING,PENDING,PENDING
+StemBleeding019.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING
+StemBleeding020.jpg,stembleeding,train,PENDING,PENDING,PENDING,PENDING

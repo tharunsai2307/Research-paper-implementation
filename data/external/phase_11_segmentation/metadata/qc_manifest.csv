@@ -1,0 +1,1 @@
+image_id,class_id,split,annotator_A_id,annotator_B_id,iou,dice,qc_result,resolution_status,consensus_mask_path,reviewer_id,timestamp

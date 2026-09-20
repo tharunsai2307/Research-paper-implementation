@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-09-20T06:15:00Z",
+  "qc_protocol": "Double-Annotator Independent Validation (IoU >= 0.75)",
+  "double_annotated_subset_target": 20,
+  "double_annotated_completed": 0,
+  "passed_qc": 0,
+  "failed_qc": 0,
+  "qc_review_required": 0,
+  "inter_annotator_metrics": {
+    "mean_iou": "N/A",
+    "median_iou": "N/A",
+    "min_iou": "N/A",
+    "max_iou": "N/A"
+  },
+  "resolution_workflow": "Annotator A + Annotator B -> Disagreement -> Consensus Adjudication -> Accepted Ground Truth"
+}
