@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-09-20T05:50:00Z",
+  "phase_8_version": "v1.0.0-audited",
+  "segmentation_dataset_status": {
+    "public_segmentation_masks_available": false,
+    "polygon_annotations_available": false,
+    "license_verification_status": "CC_BY_4.0_VERIFIED_DETECTION_ONLY",
+    "segmentation_model_trained": false,
+    "reason": "No publicly verified pixel-level or polygon segmentation datasets exist for coconut foliar/trunk diseases."
+  },
+  "longitudinal_dataset_status": {
+    "longitudinal_data_available": false,
+    "repeated_tree_observations_available": false,
+    "lstm_trained": false,
+    "gru_trained": false,
+    "progression_prediction_validated": false,
+    "reason": "Existing benchmark contains only static photos from 2 morning field walks; 0 multi-week revisit records exist."
+  },
+  "regression_protection": {
+    "phase_3_protected": true,
+    "phase_4_protected": true,
+    "phase_5_protected": true,
+    "phase_6_protected": true,
+    "phase_7_protected": true
+  },
+  "research_integrity": {
+    "synthetic_masks_fabricated": false,
+    "artificial_sequences_generated": false,
+    "unverified_metrics_reported": false,
+    "compliance_status": "100%_PASS"
+  },
+  "decision_gates": {
+    "can_train_segmentation": false,
+    "can_train_temporal_lstm": false,
+    "can_train_temporal_gru": false,
+    "recommended_title": "A YOLOv8-Based Framework for Automated Coconut Tree Disease Detection and Plantation Health Monitoring Using Mobile Applications"
+  }
+}
